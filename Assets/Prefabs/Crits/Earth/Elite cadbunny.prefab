@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6080622074753805778}
   - component: {fileID: 7521953547761128672}
   m_Layer: 0
-  m_Name: Elite Cadbunny
+  m_Name: Elite cadbunny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &7521953547761128672
 MonoBehaviour:
   m_ObjectHideFlags: 0
