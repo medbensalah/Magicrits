@@ -14,7 +14,7 @@ public class ChocoquakeSkill : MonoBehaviour
 
     public ChocoquakeSkill()
     {
-        // Magical Attack Skill
+        // Magic Attack Skill
         MASkill maSkill = new MASkill(val, acc);
         skills.Add(maSkill);
 

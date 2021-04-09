@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1411071083503468053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1411071083503468056}
+  - component: {fileID: 1411071083503468059}
+  - component: {fileID: 1411071083503468058}
+  m_Layer: 0
+  m_Name: Ignios
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1411071083503468056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411071083503468053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1411071083503468059
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411071083503468053}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b4e2d1b7efa2bac4e92747400892f352, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.46, y: 1.46}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1411071083503468058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411071083503468053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b128d61a22dfc42b0223fd5136d033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critName: Ignios
+  critDescription: Ignios distracts travelers with its cute innocent appearance to
+    steal food and coins once their guard is down.
+  images:
+  - {fileID: 21300000, guid: b4e2d1b7efa2bac4e92747400892f352, type: 3}
+  - {fileID: 21300000, guid: 618996d2ab3b48245b5bb038af1e1431, type: 3}
+  - {fileID: 21300000, guid: 06e3b9c29bd9e7d4a82b1ad84603867a, type: 3}
+  - {fileID: 21300000, guid: a4b02b0af2dcac9428b44f8985c0cc54, type: 3}
+  frames:
+  - {fileID: 21300000, guid: 8502474df780efc40b935dee96f84ead, type: 3}
+  - {fileID: 21300000, guid: 2f3ac883c0307d74d88f4e3dd500a697, type: 3}
+  - {fileID: 21300000, guid: 58b2888e4cf01cb4fad62ee0c88e30ba, type: 3}
+  - {fileID: 21300000, guid: a6d60a9718fc6bc4eaa2eebeb651b899, type: 3}
+  ActiveSprite: {fileID: 21300000, guid: b4e2d1b7efa2bac4e92747400892f352, type: 3}
+  ActiveFrame: {fileID: 21300000, guid: 8502474df780efc40b935dee96f84ead, type: 3}
+  Alive: 1
+  critType: 3
+  level: 1
+  xp: 0
+  health: 14
+  physicalAttack: 4
+  magicAttack: 9
+  physicalDefense: 5
+  magicDefense: 5
+  speed: 6
+  accuracy: 100
+  Confused: 0
+  Asleep: 0
+  HealthUpRate: 2
+  PAUpRate: 0
+  MAUpRate: 3
+  PDUpRate: 2
+  MDUpRate: 2
+  SpeedUpRate: 2
+  CritXpValue: 0
+  skills:
+  - {fileID: 646814137990083230, guid: 4c1fd22299f41b743bfb698d576dea4c, type: 3}
+  - {fileID: 3129784007559393893, guid: 4fa33ad0833598845a2a1ef87dcaf0fa, type: 3}
+  - {fileID: 4298056480455393863, guid: 3fa36f84b71a3864d87293a6e19ef87e, type: 3}
+  - {fileID: 8695835400816052335, guid: 68df4871d4d785a4eb0bf67692c97f53, type: 3}
+  - {fileID: 1553663213302459687, guid: 54518d2dcbb61b04bb3f6a16a2fe30c9, type: 3}
+  - {fileID: 8892371919027043202, guid: 2c60f98aa25d8e54ea36536680040598, type: 3}
+  - {fileID: 6122006472922293267, guid: 3747030439dfb504bbe98b77cd4b0859, type: 3}
+  - {fileID: 1883865728693529403, guid: 08903671fdc9836429dec6ba60434ffa, type: 3}
+  - {fileID: 6938643539046471613, guid: 144ae84abde4fe34a99c760fd467c64a, type: 3}
+  - {fileID: 94810845488794697, guid: 94d087e2bc92178478c2db2dc7b6b825, type: 3}
+  - {fileID: 2049135540878002687, guid: 3c396849db8c5c84c95b8196059caf5f, type: 3}
+  - {fileID: 7182277883411278754, guid: 1e31a0f2f45ddea42b71b142d396158a, type: 3}
+  - {fileID: 3037930865448749795, guid: ce8caed2cc8ba81428fb7cb4a16c41e1, type: 3}

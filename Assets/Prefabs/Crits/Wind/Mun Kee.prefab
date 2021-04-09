@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3022313853598347554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3022313853598347615}
+  - component: {fileID: 3022313853598347612}
+  - component: {fileID: 3022313853598347613}
+  m_Layer: 0
+  m_Name: Mun Kee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3022313853598347615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022313853598347554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3022313853598347612
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022313853598347554}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 7561dcc323129e546a6b5539f723f866, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4, y: 4.5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &3022313853598347613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022313853598347554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b128d61a22dfc42b0223fd5136d033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critName: Mun Kee
+  critDescription: Mun Kee's wings are just barely powerful enough to lift its body
+    off the ground. It usually just flutters in the air for a moment before landing
+    again.
+  images:
+  - {fileID: 21300000, guid: 7561dcc323129e546a6b5539f723f866, type: 3}
+  - {fileID: 21300000, guid: de159719a02b5b44d9dbb318358a213b, type: 3}
+  - {fileID: 21300000, guid: 03894685198b8f54997a715018382039, type: 3}
+  - {fileID: 21300000, guid: 7df77f0245a5e5f48ae84042e4241e6e, type: 3}
+  frames:
+  - {fileID: 21300000, guid: d79d21e92c016a843ae275bbea987929, type: 3}
+  - {fileID: 21300000, guid: efc8367c67acd4842b8971ff3b1eb0b1, type: 3}
+  - {fileID: 21300000, guid: ada2233d4e99ec24485bfac5f82b850c, type: 3}
+  - {fileID: 21300000, guid: 452994781b9f80543a242026adf38585, type: 3}
+  ActiveSprite: {fileID: 21300000, guid: 7561dcc323129e546a6b5539f723f866, type: 3}
+  ActiveFrame: {fileID: 21300000, guid: d79d21e92c016a843ae275bbea987929, type: 3}
+  Alive: 1
+  critType: 2
+  level: 1
+  xp: 0
+  health: 14
+  physicalAttack: 6
+  magicAttack: 9
+  physicalDefense: 3
+  magicDefense: 5
+  speed: 6
+  accuracy: 100
+  Confused: 0
+  Asleep: 0
+  HealthUpRate: 2
+  PAUpRate: 1
+  MAUpRate: 3
+  PDUpRate: 1
+  MDUpRate: 2
+  SpeedUpRate: 2
+  CritXpValue: 0
+  skills:
+  - {fileID: 3052123779666340735, guid: 5211defeb01fe4d4f8ef3b737a0972be, type: 3}
+  - {fileID: 2097992566330543134, guid: e6e3a252dd29f774aaa90bd5310a437c, type: 3}
+  - {fileID: 5551900339313483589, guid: ee6a55523ecd9bf449af3f1d6444f521, type: 3}
+  - {fileID: 8729859318149465717, guid: 72007846fbefd84438e361177e82de49, type: 3}
+  - {fileID: 2409700661648160048, guid: ebcbd5bd4b38f864581ee2a8b39d6363, type: 3}
+  - {fileID: 3900112378839295503, guid: 343344ffc60fc314080708920f9c1373, type: 3}
+  - {fileID: 1311509149845600244, guid: 4111b39281d380f47bb5897154adf683, type: 3}
+  - {fileID: 4766410508091430217, guid: edc975ff384efc945bc63890b44bb96c, type: 3}
+  - {fileID: 5176362869046015429, guid: dad9927099d26f34a8b3808b3cc91e27, type: 3}
+  - {fileID: 4238544946566672225, guid: 065b4ddcab1ae984485530f346cbef98, type: 3}
+  - {fileID: 8228544228685494109, guid: 82dd4b70f809c8d4aa507ed04a55bfda, type: 3}
+  - {fileID: 788686893053306046, guid: abaad9f25897a4144bc4978d604923fa, type: 3}
+  - {fileID: 3037930865448749795, guid: ce8caed2cc8ba81428fb7cb4a16c41e1, type: 3}

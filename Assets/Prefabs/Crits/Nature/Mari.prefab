@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8053069198089493497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8053069198089493502}
+  - component: {fileID: 8053069198089493503}
+  - component: {fileID: 8053069198089493496}
+  m_Layer: 0
+  m_Name: Mari
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8053069198089493502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053069198089493497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &8053069198089493503
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053069198089493497}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: e9655755afb298e4c924b81ac4b0e9e2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.89, y: 1.67}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &8053069198089493496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053069198089493497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b128d61a22dfc42b0223fd5136d033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critName: Mari
+  critDescription: Don't let Mari's demeanor and nurturing spirt fool you. She is
+    adept at magic in both nature and wind.
+  images:
+  - {fileID: 21300000, guid: e9655755afb298e4c924b81ac4b0e9e2, type: 3}
+  - {fileID: 21300000, guid: 220dc3e73e237be459b9c7dfbcbf6566, type: 3}
+  - {fileID: 21300000, guid: 9830594575a416e4995972c8a40c4270, type: 3}
+  - {fileID: 21300000, guid: d1c52291f42cef0499ed5d4334d3a2aa, type: 3}
+  frames:
+  - {fileID: 21300000, guid: 2e3a24fe35431204fa59adffe34dac02, type: 3}
+  - {fileID: 21300000, guid: 69528cc70f7b59a4087ad5c1bb1747d9, type: 3}
+  - {fileID: 21300000, guid: 5519279640d0a0d439684d99f3832561, type: 3}
+  - {fileID: 21300000, guid: ab13f6b85e253004c9ccb5d87b27ce1e, type: 3}
+  ActiveSprite: {fileID: 21300000, guid: e9655755afb298e4c924b81ac4b0e9e2, type: 3}
+  ActiveFrame: {fileID: 21300000, guid: 2e3a24fe35431204fa59adffe34dac02, type: 3}
+  Alive: 1
+  critType: 5
+  level: 1
+  xp: 0
+  health: 14
+  physicalAttack: 6
+  magicAttack: 10
+  physicalDefense: 6
+  magicDefense: 5
+  speed: 6
+  accuracy: 100
+  Confused: 0
+  Asleep: 0
+  HealthUpRate: 2
+  PAUpRate: 1
+  MAUpRate: 4
+  PDUpRate: 3
+  MDUpRate: 2
+  SpeedUpRate: 2
+  CritXpValue: 0
+  skills:
+  - {fileID: 8212063478718089751, guid: 5839ee6b82a0cde46a42911f774ee69e, type: 3}
+  - {fileID: 2604187103198922889, guid: b593cec5cda57624fa88316ee4e77e8c, type: 3}
+  - {fileID: 5486895343228700361, guid: 3c32d7c5b47e68d4bb084fe343f6db44, type: 3}
+  - {fileID: 5877725972640250090, guid: 35a7cef2c3a5c3141af983dd5c900b57, type: 3}
+  - {fileID: 1628487124357519883, guid: 0cfc1fdfe3d1d5f49b9ea9e1b8a90112, type: 3}
+  - {fileID: 4912280186331248920, guid: 53b1581b1f330f94f8fe8d29ba2467c3, type: 3}
+  - {fileID: 8051048837632660003, guid: 20c0608ac0da4284aae7802cac9b6a9e, type: 3}
+  - {fileID: 4117689646639452974, guid: bcbeab9778c5c62449291c1759d13e6c, type: 3}
+  - {fileID: 3858232963455070788, guid: 28eb140014a0b4446ae5f8326192ec68, type: 3}
+  - {fileID: 2133688746954502839, guid: 37ae40f77bba385469754306074d0858, type: 3}
+  - {fileID: 6587798748830012604, guid: 9625e8e5e37a6014392972beadc92cdc, type: 3}
+  - {fileID: 9020723475768372326, guid: aaf3a69c23f00514cb5dd909ab59113e, type: 3}
+  - {fileID: 3037930865448749795, guid: ce8caed2cc8ba81428fb7cb4a16c41e1, type: 3}

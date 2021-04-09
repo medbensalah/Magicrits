@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &578595401392146581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 578595401392146578}
+  - component: {fileID: 578595401392146579}
+  - component: {fileID: 578595401392146580}
+  m_Layer: 0
+  m_Name: Flurrious
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &578595401392146578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578595401392146581}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &578595401392146579
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578595401392146581}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: fc4d90389c0abf644a8cba7c15dca0c4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.02, y: 1.46}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &578595401392146580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578595401392146581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b128d61a22dfc42b0223fd5136d033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critName: Flurrious
+  critDescription: Flurrious takes snowball fights very seriously. Its fort-building
+    skills are renowned throughout the whole of Miscria.
+  images:
+  - {fileID: 21300000, guid: fc4d90389c0abf644a8cba7c15dca0c4, type: 3}
+  - {fileID: 21300000, guid: 251f9c8f61a77c44d9e7eb4afe8f488c, type: 3}
+  - {fileID: 21300000, guid: 6d5457cc7c3406b488d14b1d77ea641a, type: 3}
+  - {fileID: 21300000, guid: d5613d450f22d5345b96f5a19ec6f01e, type: 3}
+  frames:
+  - {fileID: 21300000, guid: 45807abd5d5b1464ca9904cfc9b0cf37, type: 3}
+  - {fileID: 21300000, guid: de195859ea043c64bb71eae7c41b57f5, type: 3}
+  - {fileID: 21300000, guid: b3bae8fff94ead943aa3fce17cba8241, type: 3}
+  - {fileID: 21300000, guid: 784e58f6aecb6df46a6b6e301e9d9040, type: 3}
+  ActiveSprite: {fileID: 21300000, guid: fc4d90389c0abf644a8cba7c15dca0c4, type: 3}
+  ActiveFrame: {fileID: 21300000, guid: 45807abd5d5b1464ca9904cfc9b0cf37, type: 3}
+  Alive: 1
+  critType: 4
+  level: 1
+  xp: 0
+  health: 14
+  physicalAttack: 9
+  magicAttack: 6
+  physicalDefense: 5
+  magicDefense: 3
+  speed: 5
+  accuracy: 100
+  Confused: 0
+  Asleep: 0
+  HealthUpRate: 2
+  PAUpRate: 3
+  MAUpRate: 1
+  PDUpRate: 2
+  MDUpRate: 1
+  SpeedUpRate: 1
+  CritXpValue: 0
+  skills:
+  - {fileID: 8729859318149465717, guid: 72007846fbefd84438e361177e82de49, type: 3}
+  - {fileID: 963279458956385460, guid: af03270042ed48d46a10f7bfc71adb1b, type: 3}
+  - {fileID: 5486895343228700361, guid: 3c32d7c5b47e68d4bb084fe343f6db44, type: 3}
+  - {fileID: 3270310723996278558, guid: 740fa6b45ae4efc4284ae35c1ac57979, type: 3}
+  - {fileID: 1665702845460436785, guid: f7d4ebe19e074ca4ebfdab7cee9105f4, type: 3}
+  - {fileID: 4766410508091430217, guid: edc975ff384efc945bc63890b44bb96c, type: 3}
+  - {fileID: 7033011781086314677, guid: 9afa8703fef3fb64fa7e0148329accca, type: 3}
+  - {fileID: 1082524633311417047, guid: f5e2f5ff6ce4c8b409a245b50441b394, type: 3}
+  - {fileID: 7423233429284345370, guid: c18398ba5ceb89b409fce951630da607, type: 3}
+  - {fileID: 1524865540920750115, guid: e36b0e3493532c14994d1f4e3059a969, type: 3}
+  - {fileID: 30277307022687682, guid: 8f1823dbfc1a22e4cbe41f74cc02e1fd, type: 3}
+  - {fileID: 8940509503863052150, guid: 0c135e2946253124485550e0864842e0, type: 3}
+  - {fileID: 3037930865448749795, guid: ce8caed2cc8ba81428fb7cb4a16c41e1, type: 3}

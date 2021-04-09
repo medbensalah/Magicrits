@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5795050779429262435
+--- !u!1 &7679078553600425272
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5795050779429262436}
-  - component: {fileID: 5795050779429262437}
-  - component: {fileID: 5795050779429262434}
+  - component: {fileID: 7679078553600425255}
+  - component: {fileID: 975941363608724989}
+  - component: {fileID: 8181393923188533013}
   m_Layer: 0
   m_Name: Elite Rudy
   m_TagString: Untagged
@@ -18,27 +18,88 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5795050779429262436
+--- !u!4 &7679078553600425255
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5795050779429262435}
+  m_GameObject: {fileID: 7679078553600425272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4636817, y: 0.34252718, z: -0.034685295}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5795050779429262437
+--- !u!114 &975941363608724989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7679078553600425272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b128d61a22dfc42b0223fd5136d033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critName: Elite Rudy
+  critDescription: Elite Rudy, with his slightly dweeby appearance, often gets picked
+    on by other Miscrits. He's very driven to grow up strong.
+  images:
+  - {fileID: 21300000, guid: 3e07e9a69084e5e4fb3158fb33016328, type: 3}
+  - {fileID: 21300000, guid: 03697911b7a472449a8ef1a31b41bd25, type: 3}
+  - {fileID: 21300000, guid: d4fabdfe3d566224babe43cc234152d8, type: 3}
+  - {fileID: 21300000, guid: 1790b946f7fbba84992727b631b8123f, type: 3}
+  frames:
+  - {fileID: 21300000, guid: 00991a10d162557458b93941fc1ec469, type: 3}
+  - {fileID: 21300000, guid: 7d561e83ad512fb45979f3194d99c14d, type: 3}
+  - {fileID: 21300000, guid: 2076b51b4cda9944c9ff3b414eef8b71, type: 3}
+  - {fileID: 21300000, guid: 2c2563f0b29184d478bea553398d645b, type: 3}
+  ActiveSprite: {fileID: 21300000, guid: 3e07e9a69084e5e4fb3158fb33016328, type: 3}
+  ActiveFrame: {fileID: 21300000, guid: 00991a10d162557458b93941fc1ec469, type: 3}
+  Alive: 1
+  critType: 0
+  level: 1
+  xp: 0
+  health: 16
+  physicalAttack: 11
+  magicAttack: 8
+  physicalDefense: 7
+  magicDefense: 5
+  speed: 5
+  accuracy: 100
+  Confused: 0
+  Asleep: 0
+  HealthUpRate: 3
+  PAUpRate: 4
+  MAUpRate: 2
+  PDUpRate: 4
+  MDUpRate: 2
+  SpeedUpRate: 1
+  CritXpValue: 0
+  skills:
+  - {fileID: 2531511196067035651, guid: 20f626ea64662304a99914fb3e9441f4, type: 3}
+  - {fileID: 2583873564386888142, guid: 39e0425ccd78ec741af4d2edf78229e1, type: 3}
+  - {fileID: 8236174708197696426, guid: f08415e3cded5364c812c6e44e62f396, type: 3}
+  - {fileID: 6344744177054220537, guid: 07bea8e06c01311429d56b4b0675a6de, type: 3}
+  - {fileID: 389584877769227113, guid: fde73c8fae981af499b5626a451026ef, type: 3}
+  - {fileID: 9019519070774149549, guid: 832f193de6ef7e64282fe0a93f974797, type: 3}
+  - {fileID: 4117689646639452974, guid: bcbeab9778c5c62449291c1759d13e6c, type: 3}
+  - {fileID: 8405018519549248814, guid: 255e4e132c4a20e4394dcbf301c4afe9, type: 3}
+  - {fileID: 992717497312717620, guid: 29f704255132a7341adf465e9cb76d50, type: 3}
+  - {fileID: 6982163957400222550, guid: 55cc0e2126c3fa04c974fa3cd5032434, type: 3}
+  - {fileID: 8836183788811977817, guid: 37662e7b7258dc34b8983150e6b42feb, type: 3}
+  - {fileID: 2852765387454793992, guid: 26fedc503377a174182115321d370d66, type: 3}
+  - {fileID: 3037930865448749795, guid: ce8caed2cc8ba81428fb7cb4a16c41e1, type: 3}
+--- !u!212 &8181393923188533013
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5795050779429262435}
+  m_GameObject: {fileID: 7679078553600425272}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -82,63 +143,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5795050779429262434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5795050779429262435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7b128d61a22dfc42b0223fd5136d033, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  critName: Elite Rudy
-  critDescription: Elite Rudy, with his slightly dweeby appearance, often gets picked
-    on by other Miscrits. He's very driven to grow up strong.
-  images:
-  - {fileID: 21300000, guid: 3e07e9a69084e5e4fb3158fb33016328, type: 3}
-  - {fileID: 21300000, guid: 03697911b7a472449a8ef1a31b41bd25, type: 3}
-  - {fileID: 21300000, guid: d4fabdfe3d566224babe43cc234152d8, type: 3}
-  - {fileID: 21300000, guid: 1790b946f7fbba84992727b631b8123f, type: 3}
-  frames:
-  - {fileID: 21300000, guid: 00991a10d162557458b93941fc1ec469, type: 3}
-  - {fileID: 21300000, guid: 7d561e83ad512fb45979f3194d99c14d, type: 3}
-  - {fileID: 21300000, guid: 2076b51b4cda9944c9ff3b414eef8b71, type: 3}
-  - {fileID: 21300000, guid: 2c2563f0b29184d478bea553398d645b, type: 3}
-  ActiveSprite: {fileID: 21300000, guid: 3e07e9a69084e5e4fb3158fb33016328, type: 3}
-  ActiveFrame: {fileID: 21300000, guid: 00991a10d162557458b93941fc1ec469, type: 3}
-  Alive: 1
-  critType: 0
-  level: 1
-  xp: 0
-  health: 16
-  physicalAttack: 10
-  magicAttack: 7
-  physicalDefense: 7
-  magicDefense: 5
-  speed: 5
-  accuracy: 100
-  Confused: 0
-  Asleep: 0
-  HealthUpRate: 3
-  PAUpRate: 4
-  MAUpRate: 2
-  PDUpRate: 4
-  MDUpRate: 2
-  SpeedUpRate: 1
-  CritXpValue: 0
-  skills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

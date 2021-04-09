@@ -14,9 +14,8 @@ public class FurySkill : MonoBehaviour
 
     public FurySkill()
     {
-        // Physical Attack Skill
-        PABuffSkill pabuffSkill = new PABuffSkill(val, acc);
-        skills.Add(pabuffSkill);
+        // Magic Attack Skill
+        skills.Add(new MABuffSkill(val, acc));
     }
 
     //skill execution

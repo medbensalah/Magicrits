@@ -28,4 +28,3 @@ public class ConfuseSkill : MonoBehaviour, ISkill
         target.miss();
     }
 }
-

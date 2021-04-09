@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3502678296133246323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3502678296133246320}
+  - component: {fileID: 3502678296133246321}
+  - component: {fileID: 3502678296133246322}
+  m_Layer: 0
+  m_Name: Elkenhoof
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3502678296133246320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3502678296133246323}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3502678296133246321
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3502678296133246323}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 52bf760a4335a1941ba7130981161cc9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.84, y: 1.66}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &3502678296133246322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3502678296133246323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b128d61a22dfc42b0223fd5136d033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critName: Elkenhoof
+  critDescription: Elkenhoof spends hours every day practicing its pouncing skills,
+    But its lack of speed doesnt help things.
+  images:
+  - {fileID: 21300000, guid: 52bf760a4335a1941ba7130981161cc9, type: 3}
+  - {fileID: 21300000, guid: e067de1edf0cc434397b7e2ce388cf27, type: 3}
+  - {fileID: 21300000, guid: 54ea4f6e775b17f48a29b9827b31e4cc, type: 3}
+  - {fileID: 21300000, guid: 8c30208fd1a037e4887ffeb36b3bcf37, type: 3}
+  frames:
+  - {fileID: 21300000, guid: d14e2cd4b51e9194e90bbc74cb0ed1ac, type: 3}
+  - {fileID: 21300000, guid: f44d0674a51b02d4d9c24640cfe0ff51, type: 3}
+  - {fileID: 21300000, guid: 9c8546ae330d5b243b6f0abbb05d6f53, type: 3}
+  - {fileID: 21300000, guid: 0455f7070bf62a249934cbf031f0bf73, type: 3}
+  ActiveSprite: {fileID: 21300000, guid: 52bf760a4335a1941ba7130981161cc9, type: 3}
+  ActiveFrame: {fileID: 21300000, guid: d14e2cd4b51e9194e90bbc74cb0ed1ac, type: 3}
+  Alive: 1
+  critType: 5
+  level: 1
+  xp: 0
+  health: 12
+  physicalAttack: 11
+  magicAttack: 8
+  physicalDefense: 5
+  magicDefense: 7
+  speed: 4
+  accuracy: 100
+  Confused: 0
+  Asleep: 0
+  HealthUpRate: 1
+  PAUpRate: 4
+  MAUpRate: 2
+  PDUpRate: 2
+  MDUpRate: 4
+  SpeedUpRate: 0
+  CritXpValue: 0
+  skills:
+  - {fileID: 2604187103198922889, guid: b593cec5cda57624fa88316ee4e77e8c, type: 3}
+  - {fileID: 6132284723338147652, guid: a3387d69879c61a4a8efe84fd696bb49, type: 3}
+  - {fileID: 5486895343228700361, guid: 3c32d7c5b47e68d4bb084fe343f6db44, type: 3}
+  - {fileID: 6344744177054220537, guid: 07bea8e06c01311429d56b4b0675a6de, type: 3}
+  - {fileID: 4827186362599964090, guid: 20b1517229c81064081e0816137f9010, type: 3}
+  - {fileID: 4205450386496105297, guid: 02ec0d48f293c4d4e8914c11a71524cc, type: 3}
+  - {fileID: 1082524633311417047, guid: f5e2f5ff6ce4c8b409a245b50441b394, type: 3}
+  - {fileID: 7033011781086314677, guid: 9afa8703fef3fb64fa7e0148329accca, type: 3}
+  - {fileID: 487859243590122502, guid: 5938df0a586137d49a534c8a53d94abc, type: 3}
+  - {fileID: 917855139182930721, guid: 3889bf8f418ee6d47883065101903194, type: 3}
+  - {fileID: 5892411051605277238, guid: eda54ef4e00688145a6eeb42a57fb309, type: 3}
+  - {fileID: 240317973284551771, guid: 4fd514d5d4068054e90e16b8666076db, type: 3}
+  - {fileID: 3037930865448749795, guid: ce8caed2cc8ba81428fb7cb4a16c41e1, type: 3}

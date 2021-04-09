@@ -18,7 +18,7 @@ public class BrightLightsSkill : MonoBehaviour
         PADebuffSkill padebuffSkill = new PADebuffSkill(val, acc);
         skills.Add(padebuffSkill);
 
-        // Magical Attack Skill
+        // Magic Attack Skill
         MADebuffSkill madebuffSkill = new MADebuffSkill(val, acc);
         skills.Add(madebuffSkill);
 
@@ -26,7 +26,7 @@ public class BrightLightsSkill : MonoBehaviour
         PDDebuffSkill pddebuffSkill = new PDDebuffSkill(val, acc);
         skills.Add(pddebuffSkill);
 
-        // Magical Defense Skill
+        // Magic Defense Skill
         MDDebuffSkill mddebuffSkill = new MDDebuffSkill(val, acc);
         skills.Add(mddebuffSkill);
 

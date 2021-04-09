@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class RingsOfPowerSkill : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //array of base skills
+    [SerializeField] private List<ISkill> skills = new List<ISkill>();
+    //skill description
+    public string Description;
+    public string name;
+    public int val;
+    public int acc;
+
+    public RingsOfPowerSkill()
     {
-        
+        // Physical Defense Skill
+        PDDebuffSkill pddebuffSkill = new PDDebuffSkill(val, acc);
+        skills.Add(pddebuffSkill);
+
     }
 
-    // Update is called once per frame
-    void Update()
+    //skill execution
+    public void execute(Crit caster, Crit target)
     {
-        
+        foreach (ISkill skill in skills)
+        {
+            //executing all base skills
+            skill.execute(caster, target);
+        }
     }
 }

@@ -14,7 +14,7 @@ public class SandstormSkill : MonoBehaviour
 
     public SandstormSkill()
     {
-        // Physical Attack Skill
+        // Confuse Skill
         ConfuseSkill confuseSkill = new ConfuseSkill(val, acc);
         skills.Add(confuseSkill);
     }

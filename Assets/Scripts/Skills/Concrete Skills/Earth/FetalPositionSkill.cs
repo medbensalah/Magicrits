@@ -14,13 +14,13 @@ public class FetalPositionSkill : MonoBehaviour
 
     public FetalPositionSkill()
     {
-        // Speed Skill
-        SpeedDebuffSkill speeddebuffSkill = new SpeedDebuffSkill(val, acc);
-        skills.Add(speeddebuffSkill);
+        // Physical Attack Skill
+        PADebuffSkill padebuffSkill = new PADebuffSkill(val, acc);
+        skills.Add(padebuffSkill);
 
-        // Accuracy Skill
-        AccuracyDebuffSkill accuracydebuffSkill = new AccuracyDebuffSkill(val, acc);
-        skills.Add(accuracydebuffSkill);
+        // Magical Attack Skill
+        MADebuffSkill madebuffSkill = new MADebuffSkill(val, acc);
+        skills.Add(madebuffSkill);
     }
 
     //skill execution

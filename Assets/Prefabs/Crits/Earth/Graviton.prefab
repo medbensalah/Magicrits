@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8026069031282795319
+--- !u!1 &3221270874335462757
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8026069031282795318}
-  - component: {fileID: 4380344254187478541}
-  - component: {fileID: 6581574850811985247}
+  - component: {fileID: 3221270874335462758}
+  - component: {fileID: 88396455792928287}
+  - component: {fileID: 3910412774197461890}
   m_Layer: 0
   m_Name: Graviton
   m_TagString: Untagged
@@ -18,27 +18,88 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8026069031282795318
+--- !u!4 &3221270874335462758
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8026069031282795319}
+  m_GameObject: {fileID: 3221270874335462757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4636817, y: 0.34252718, z: -0.034685295}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4380344254187478541
+--- !u!114 &88396455792928287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3221270874335462757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b128d61a22dfc42b0223fd5136d033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critName: Graviton
+  critDescription: '"Portus''s ability to split itself in two can create quite a
+    jarring sight when its top half appears across the room from its bottom half.'
+  images:
+  - {fileID: 21300000, guid: 0c30c6432d363ba49867bb94ef0495fa, type: 3}
+  - {fileID: 21300000, guid: a89e201189fe3cf409c793310516e2d4, type: 3}
+  - {fileID: 21300000, guid: 78ad6063886cd01459935997ba8645e2, type: 3}
+  - {fileID: 21300000, guid: 1e9aab891e5e40745a113017b575f29e, type: 3}
+  frames:
+  - {fileID: 21300000, guid: f0c36298d4b146c469d1cc5ebbf5a926, type: 3}
+  - {fileID: 21300000, guid: 1113848bbc5bb5441952b67ec87bef50, type: 3}
+  - {fileID: 21300000, guid: 01d24512089e20642baaf6b238c086c5, type: 3}
+  - {fileID: 21300000, guid: 48b07b784198aa2488184ba7e6778ce7, type: 3}
+  ActiveSprite: {fileID: 21300000, guid: 0c30c6432d363ba49867bb94ef0495fa, type: 3}
+  ActiveFrame: {fileID: 21300000, guid: f0c36298d4b146c469d1cc5ebbf5a926, type: 3}
+  Alive: 1
+  critType: 0
+  level: 1
+  xp: 0
+  health: 12
+  physicalAttack: 10
+  magicAttack: 6
+  physicalDefense: 5
+  magicDefense: 5
+  speed: 8
+  accuracy: 100
+  Confused: 0
+  Asleep: 0
+  HealthUpRate: 1
+  PAUpRate: 4
+  MAUpRate: 1
+  PDUpRate: 2
+  MDUpRate: 2
+  SpeedUpRate: 3
+  CritXpValue: 0
+  skills:
+  - {fileID: 6132284723338147652, guid: a3387d69879c61a4a8efe84fd696bb49, type: 3}
+  - {fileID: 8729859318149465717, guid: 72007846fbefd84438e361177e82de49, type: 3}
+  - {fileID: 1874518155276793890, guid: 40bafd97dabfdcc42982a661b6b5bd69, type: 3}
+  - {fileID: 5119599312314119537, guid: ad3f38cf80e0e234ab4735af761d455e, type: 3}
+  - {fileID: 4235036676072629549, guid: a975e7aee6e85bf49a4a5dd230ade496, type: 3}
+  - {fileID: 4766410508091430217, guid: edc975ff384efc945bc63890b44bb96c, type: 3}
+  - {fileID: 2526226022105390994, guid: 59933a48edfc8a74a9cf731bba523840, type: 3}
+  - {fileID: 8778199519602915918, guid: 7acb58ae4c66b7041bcfdd063efcaaa2, type: 3}
+  - {fileID: 5892411051605277238, guid: eda54ef4e00688145a6eeb42a57fb309, type: 3}
+  - {fileID: 418886725732734996, guid: 77793de9a97e7e74cb32e3920b0f58f6, type: 3}
+  - {fileID: 7867581317569567249, guid: dcde7e169991c4745a797417ffc9946e, type: 3}
+  - {fileID: 5058285705883128976, guid: 95c16dacd27c70e4eb4f5d52f7cc055e, type: 3}
+  - {fileID: 3037930865448749795, guid: ce8caed2cc8ba81428fb7cb4a16c41e1, type: 3}
+--- !u!212 &3910412774197461890
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8026069031282795319}
+  m_GameObject: {fileID: 3221270874335462757}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -82,63 +143,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6581574850811985247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8026069031282795319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7b128d61a22dfc42b0223fd5136d033, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  critName: Graviton
-  critDescription: Gravitron's speed comes from its ability to warp itself anywhere
-    using a portal. No one knows when to expect Gravitron to show up.
-  images:
-  - {fileID: 21300000, guid: 0c30c6432d363ba49867bb94ef0495fa, type: 3}
-  - {fileID: 21300000, guid: a89e201189fe3cf409c793310516e2d4, type: 3}
-  - {fileID: 21300000, guid: 78ad6063886cd01459935997ba8645e2, type: 3}
-  - {fileID: 21300000, guid: 1e9aab891e5e40745a113017b575f29e, type: 3}
-  frames:
-  - {fileID: 21300000, guid: f0c36298d4b146c469d1cc5ebbf5a926, type: 3}
-  - {fileID: 21300000, guid: 1113848bbc5bb5441952b67ec87bef50, type: 3}
-  - {fileID: 21300000, guid: 01d24512089e20642baaf6b238c086c5, type: 3}
-  - {fileID: 21300000, guid: 48b07b784198aa2488184ba7e6778ce7, type: 3}
-  ActiveSprite: {fileID: 21300000, guid: 0c30c6432d363ba49867bb94ef0495fa, type: 3}
-  ActiveFrame: {fileID: 21300000, guid: f0c36298d4b146c469d1cc5ebbf5a926, type: 3}
-  Alive: 0
-  critType: 0
-  level: 1
-  xp: 0
-  health: 12
-  physicalAttack: 11
-  magicAttack: 6
-  physicalDefense: 5
-  magicDefense: 5
-  speed: 8
-  accuracy: 100
-  Confused: 0
-  Asleep: 0
-  HealthUpRate: 1
-  PAUpRate: 4
-  MAUpRate: 1
-  PDUpRate: 2
-  MDUpRate: 2
-  SpeedUpRate: 3
-  CritXpValue: 0
-  skills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

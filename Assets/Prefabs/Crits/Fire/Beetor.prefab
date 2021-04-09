@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5614436741642078522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5614436741642078527}
+  - component: {fileID: 5614436741642078524}
+  - component: {fileID: 5614436741642078525}
+  m_Layer: 0
+  m_Name: Beetor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5614436741642078527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5614436741642078522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &5614436741642078524
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5614436741642078522}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0f947e6a9d984c24bb77b9d4138ecca3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.39, y: 1.3}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &5614436741642078525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5614436741642078522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b128d61a22dfc42b0223fd5136d033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critName: Beetor
+  critDescription: Beetor's abdomen pulses with fiery energy constantly, even when
+    it is resting. It makes a great companion for children who are afraid of the
+    dark.
+  images:
+  - {fileID: 21300000, guid: 0f947e6a9d984c24bb77b9d4138ecca3, type: 3}
+  - {fileID: 21300000, guid: 22ce2f76d5b76eb46ab306cdd20a9e6e, type: 3}
+  - {fileID: 21300000, guid: 216fcf8f783b4fc409dd734535f55453, type: 3}
+  - {fileID: 21300000, guid: e19f8842f784269448f64af78ebe3693, type: 3}
+  frames:
+  - {fileID: 21300000, guid: ee93998ea740c9a4b825bebf8665f2b5, type: 3}
+  - {fileID: 21300000, guid: 78557f36727b88b47b37cf803fb0cbce, type: 3}
+  - {fileID: 21300000, guid: 49fcd9076f0c05d4cb667bbddda4625b, type: 3}
+  - {fileID: 21300000, guid: b2a5c9b2b1b96184184a91307f68f51d, type: 3}
+  ActiveSprite: {fileID: 21300000, guid: 0f947e6a9d984c24bb77b9d4138ecca3, type: 3}
+  ActiveFrame: {fileID: 21300000, guid: ee93998ea740c9a4b825bebf8665f2b5, type: 3}
+  Alive: 1
+  critType: 3
+  level: 1
+  xp: 0
+  health: 14
+  physicalAttack: 6
+  magicAttack: 8
+  physicalDefense: 3
+  magicDefense: 5
+  speed: 4
+  accuracy: 100
+  Confused: 0
+  Asleep: 0
+  HealthUpRate: 2
+  PAUpRate: 1
+  MAUpRate: 2
+  PDUpRate: 1
+  MDUpRate: 2
+  SpeedUpRate: 0
+  CritXpValue: 0
+  skills:
+  - {fileID: 3805995028305743609, guid: 5e56e7c461b4c824c8410e3954b43d51, type: 3}
+  - {fileID: 2583873564386888142, guid: 39e0425ccd78ec741af4d2edf78229e1, type: 3}
+  - {fileID: 6932889338992916691, guid: 1b40220cb290b354e86a71d919345fd2, type: 3}
+  - {fileID: 1883865728693529403, guid: 08903671fdc9836429dec6ba60434ffa, type: 3}
+  - {fileID: 1567164011616597807, guid: 141a8a992a72033488e496b9d0076645, type: 3}
+  - {fileID: 4117689646639452974, guid: bcbeab9778c5c62449291c1759d13e6c, type: 3}
+  - {fileID: 398850904683841806, guid: 6be6afcee7eaf0444a59f2d3e2602699, type: 3}
+  - {fileID: 220280287382203993, guid: c0bd08449061eab408ab58aea93ce223, type: 3}
+  - {fileID: 6774515912866368560, guid: 0077deba010d0d04ba55127b53849bf7, type: 3}
+  - {fileID: 5892411051605277238, guid: eda54ef4e00688145a6eeb42a57fb309, type: 3}
+  - {fileID: 8778726353029244854, guid: 3fe5bf16e9f6a7c42bff6acc9caffb2e, type: 3}
+  - {fileID: 7172648254037054035, guid: 0b7ba8eeb5b99a84e9c1adf30e39b11a, type: 3}
+  - {fileID: 3037930865448749795, guid: ce8caed2cc8ba81428fb7cb4a16c41e1, type: 3}

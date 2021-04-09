@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8653597115386859654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8653597115386859653}
+  - component: {fileID: 8653597115386859652}
+  - component: {fileID: 8653597115386859655}
+  m_Layer: 0
+  m_Name: Ligh Bubblegup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8653597115386859653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653597115386859654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &8653597115386859652
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653597115386859654}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 27e54f7a8901398489d0e9c42bbcede1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.32, y: 1.2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &8653597115386859655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653597115386859654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b128d61a22dfc42b0223fd5136d033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critName: Ligh Bubblegup
+  critDescription: Light Bubblegup is dramatically more powerful than his cousin,
+    Bubblegup. He no longer sprays his water playfully due to the extreme force he
+    can exert.
+  images:
+  - {fileID: 21300000, guid: 27e54f7a8901398489d0e9c42bbcede1, type: 3}
+  - {fileID: 21300000, guid: a1ded66a86396844bb9311dec860d6dc, type: 3}
+  - {fileID: 21300000, guid: 70ca13e702a6337448a6d977bbb0da9b, type: 3}
+  - {fileID: 21300000, guid: 57d9fb149c18b044f9e75dc5c465f24e, type: 3}
+  frames:
+  - {fileID: 21300000, guid: 6652cdd1e96dc2240a4379951ea96a0b, type: 3}
+  - {fileID: 21300000, guid: 7d0efe2c95653f84aacb69b0c7718d7d, type: 3}
+  - {fileID: 21300000, guid: 2c5f53c976c39db42a45004b44f696e3, type: 3}
+  - {fileID: 21300000, guid: 298ce5444969e4b4daf09066f41b7786, type: 3}
+  ActiveSprite: {fileID: 21300000, guid: 27e54f7a8901398489d0e9c42bbcede1, type: 3}
+  ActiveFrame: {fileID: 21300000, guid: 6652cdd1e96dc2240a4379951ea96a0b, type: 3}
+  Alive: 1
+  critType: 4
+  level: 1
+  xp: 0
+  health: 17
+  physicalAttack: 7
+  magicAttack: 9
+  physicalDefense: 6
+  magicDefense: 6
+  speed: 10
+  accuracy: 100
+  Confused: 0
+  Asleep: 0
+  HealthUpRate: 4
+  PAUpRate: 2
+  MAUpRate: 3
+  PDUpRate: 3
+  MDUpRate: 3
+  SpeedUpRate: 4
+  CritXpValue: 0
+  skills:
+  - {fileID: 3270310723996278558, guid: 740fa6b45ae4efc4284ae35c1ac57979, type: 3}
+  - {fileID: 237779922608508209, guid: 8a0da99a566820f4fb9f155e476817c6, type: 3}
+  - {fileID: 8236174708197696426, guid: f08415e3cded5364c812c6e44e62f396, type: 3}
+  - {fileID: 2583873564386888142, guid: 39e0425ccd78ec741af4d2edf78229e1, type: 3}
+  - {fileID: 1229049620335297043, guid: 717478b7f6392fe42a5a8b56c190c07d, type: 3}
+  - {fileID: 3900112378839295503, guid: 343344ffc60fc314080708920f9c1373, type: 3}
+  - {fileID: 2541632973133670020, guid: fc2abc3d318cbd34bb4a9e18c926d628, type: 3}
+  - {fileID: 5709179301297413546, guid: 0408f29dccbdd364ebea61987b58ec70, type: 3}
+  - {fileID: 3002018132605836865, guid: 87252e8800193934296338187135e749, type: 3}
+  - {fileID: 3763173195169477863, guid: a6ef84e645c2a9048be08d808d1abff1, type: 3}
+  - {fileID: 8228544228685494109, guid: 82dd4b70f809c8d4aa507ed04a55bfda, type: 3}
+  - {fileID: 1904833613573637083, guid: a00fd1f0a5e50ed4d9acdeed3d838c11, type: 3}
+  - {fileID: 3769966122641052190, guid: a8b3739cb3d624145813426bd109459c, type: 3}
+  - {fileID: 3013152209055295443, guid: 36f4c7edc27fa57429d1623fdeed4466, type: 3}

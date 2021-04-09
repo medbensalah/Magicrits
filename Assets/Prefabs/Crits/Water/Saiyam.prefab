@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6128611833390059804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6128611833390059777}
+  - component: {fileID: 6128611833390059806}
+  - component: {fileID: 6128611833390059807}
+  m_Layer: 0
+  m_Name: Saiyam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6128611833390059777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128611833390059804}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &6128611833390059806
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128611833390059804}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b7e40fefd893a6245a7dc0719ec1503e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.08, y: 1.93}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &6128611833390059807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128611833390059804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b128d61a22dfc42b0223fd5136d033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critName: Saiyam
+  critDescription: Saiyam's cloak is made of seaweed it has gathered on its adventures
+    all over the ocean. Each piece holds a different memory.
+  images:
+  - {fileID: 21300000, guid: b7e40fefd893a6245a7dc0719ec1503e, type: 3}
+  - {fileID: 21300000, guid: 68c7a80379f347645b02acfff3272457, type: 3}
+  - {fileID: 21300000, guid: abb31df53fb69924297fd4de6e7b9fdc, type: 3}
+  - {fileID: 21300000, guid: bd59fdfc5a0146141a4f6bce1744fa05, type: 3}
+  frames:
+  - {fileID: 21300000, guid: c31120b918f9d594585de47f25370990, type: 3}
+  - {fileID: 21300000, guid: 3a7eb748ae2c1c34ba324cd41f52627d, type: 3}
+  - {fileID: 21300000, guid: ca138a34d1c337d438ac2ca39c37e504, type: 3}
+  - {fileID: 21300000, guid: 598d4bfbe822138489861ba95eaaae8b, type: 3}
+  ActiveSprite: {fileID: 21300000, guid: b7e40fefd893a6245a7dc0719ec1503e, type: 3}
+  ActiveFrame: {fileID: 21300000, guid: c31120b918f9d594585de47f25370990, type: 3}
+  Alive: 1
+  critType: 4
+  level: 1
+  xp: 0
+  health: 16
+  physicalAttack: 11
+  magicAttack: 8
+  physicalDefense: 3
+  magicDefense: 3
+  speed: 5
+  accuracy: 100
+  Confused: 0
+  Asleep: 0
+  HealthUpRate: 3
+  PAUpRate: 4
+  MAUpRate: 2
+  PDUpRate: 1
+  MDUpRate: 1
+  SpeedUpRate: 1
+  CritXpValue: 0
+  skills:
+  - {fileID: 963279458956385460, guid: af03270042ed48d46a10f7bfc71adb1b, type: 3}
+  - {fileID: 3270310723996278558, guid: 740fa6b45ae4efc4284ae35c1ac57979, type: 3}
+  - {fileID: 1874518155276793890, guid: 40bafd97dabfdcc42982a661b6b5bd69, type: 3}
+  - {fileID: 2583873564386888142, guid: 39e0425ccd78ec741af4d2edf78229e1, type: 3}
+  - {fileID: 4449337970454956169, guid: a2dce1e20c622f943aa496268b1201c8, type: 3}
+  - {fileID: 9071165994525099070, guid: edbf22c68779d9545b72e3ba1b530f86, type: 3}
+  - {fileID: 4800531886230248084, guid: b6e32d202d7b9df479ab7215e3c26462, type: 3}
+  - {fileID: 398850904683841806, guid: 6be6afcee7eaf0444a59f2d3e2602699, type: 3}
+  - {fileID: 6924497715407379012, guid: 3b824e59a78e8e64c8fe57a226cecca7, type: 3}
+  - {fileID: 718503854866167967, guid: c1de4d5a5a5edd84db01087f7a442f39, type: 3}
+  - {fileID: 1062012656565583828, guid: a3efedf5670b30642b892839ebc74a5c, type: 3}
+  - {fileID: 2147403491927942812, guid: 477cf94d9ded3b24d8273684f6804446, type: 3}
+  - {fileID: 3037930865448749795, guid: ce8caed2cc8ba81428fb7cb4a16c41e1, type: 3}

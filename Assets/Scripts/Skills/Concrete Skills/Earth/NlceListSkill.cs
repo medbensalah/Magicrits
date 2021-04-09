@@ -14,29 +14,9 @@ public class NlceListSkill : MonoBehaviour
 
     public NlceListSkill()
     {
-        // Physical Attack Skill
-        PABuffSkill pabuffSkill = new PABuffSkill(val, acc);
-        skills.Add(pabuffSkill);
-
-        // Magical Attack Skill
-        MABuffSkill mabuffSkill = new MABuffSkill(val, acc);
-        skills.Add(mabuffSkill);
-
-        // Physical Defense Skill
-        PDBuffSkill pdbuffSkill = new PDBuffSkill(val, acc);
-        skills.Add(pdbuffSkill);
-
-        // Magical Defense Skill
+        // Magic Defense Skill
         MDBuffSkill mdbuffSkill = new MDBuffSkill(val, acc);
         skills.Add(mdbuffSkill);
-
-        // Speed Skill
-        SpeedBuffSkill speedbuffSkill = new SpeedBuffSkill(val, acc);
-        skills.Add(speedbuffSkill);
-
-        // Accuracy Skill
-        AccuracyBuffSkill accuracybuffSkill = new AccuracyBuffSkill(val, acc);
-        skills.Add(accuracybuffSkill);
     }
 
     //skill execution

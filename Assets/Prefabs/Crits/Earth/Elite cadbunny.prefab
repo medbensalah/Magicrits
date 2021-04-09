@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8796883568603947529
+--- !u!1 &7576195497623336869
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5436246659997588879}
-  - component: {fileID: 3760529154517873266}
-  - component: {fileID: 5103864833596836982}
+  - component: {fileID: 7576195497623336868}
+  - component: {fileID: 6080622074753805778}
+  - component: {fileID: 7521953547761128672}
   m_Layer: 0
-  m_Name: Elite cadbunny
+  m_Name: Elite Cadbunny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5436246659997588879
+--- !u!4 &7576195497623336868
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8796883568603947529}
+  m_GameObject: {fileID: 7576195497623336869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4636817, y: 0.34252718, z: -0.034685295}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3760529154517873266
+--- !u!212 &6080622074753805778
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8796883568603947529}
+  m_GameObject: {fileID: 7576195497623336869}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -82,19 +82,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5103864833596836982
+--- !u!114 &7521953547761128672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8796883568603947529}
+  m_GameObject: {fileID: 7576195497623336869}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7b128d61a22dfc42b0223fd5136d033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  critName: Elite cadbunny
+  critName: Elite Cadbunny
   critDescription: Elite Cadbunny's ooey, gooey white chocolate center leaves a sweet
     and shining trail behind wherever it goes. The outer shell is as tough as the
     inside is mushy.
@@ -131,15 +131,16 @@ MonoBehaviour:
   SpeedUpRate: 3
   CritXpValue: 0
   skills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2531511196067035651, guid: 20f626ea64662304a99914fb3e9441f4, type: 3}
+  - {fileID: 963279458956385460, guid: af03270042ed48d46a10f7bfc71adb1b, type: 3}
+  - {fileID: 1874518155276793890, guid: 40bafd97dabfdcc42982a661b6b5bd69, type: 3}
+  - {fileID: 3270310723996278558, guid: 740fa6b45ae4efc4284ae35c1ac57979, type: 3}
+  - {fileID: 1764920494848283615, guid: 3f17bb0611451ff45ab7c012302fb07e, type: 3}
+  - {fileID: 4589193405510468672, guid: ca756a4627b51ff45b485b58d6d0ee30, type: 3}
+  - {fileID: 3412946514903544904, guid: f5780f1277c35e34c8216d2ec0b5eb85, type: 3}
+  - {fileID: 8405018519549248814, guid: 255e4e132c4a20e4394dcbf301c4afe9, type: 3}
+  - {fileID: 1524865540920750115, guid: e36b0e3493532c14994d1f4e3059a969, type: 3}
+  - {fileID: 5688351103029123167, guid: 5d2da8fa2bd986d4c9e6a55ae191ab3f, type: 3}
+  - {fileID: 7147879419039398154, guid: 2268d3b759210154a93f10d47db28efa, type: 3}
+  - {fileID: 7306100253725269446, guid: 6c66fa1b285be6a479fd9910db485d13, type: 3}
+  - {fileID: 3037930865448749795, guid: ce8caed2cc8ba81428fb7cb4a16c41e1, type: 3}

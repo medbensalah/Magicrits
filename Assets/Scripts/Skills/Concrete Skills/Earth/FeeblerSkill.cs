@@ -18,7 +18,7 @@ public class FeeblerSkill : MonoBehaviour
         PDDebuffSkill pddebuffSkill = new PDDebuffSkill(val, acc);
         skills.Add(pddebuffSkill);
 
-        // Magical Defense Skill
+        // Magic Defense Skill
         MDDebuffSkill mddebuffSkill = new MDDebuffSkill(val, acc);
         skills.Add(mddebuffSkill);
 
