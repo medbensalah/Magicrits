@@ -123,12 +123,12 @@ MonoBehaviour:
   accuracy: 100
   Confused: 0
   Asleep: 0
-  HealthUpRate: 2
+  HealthUpRate: 4
   PAUpRate: 1
-  MAUpRate: 3
-  PDUpRate: 1
-  MDUpRate: 2
-  SpeedUpRate: 2
+  MAUpRate: 4
+  PDUpRate: 3
+  MDUpRate: 3
+  SpeedUpRate: 4
   CritXpValue: 0
   skills:
   - {fileID: 3052123779666340735, guid: 5211defeb01fe4d4f8ef3b737a0972be, type: 3}

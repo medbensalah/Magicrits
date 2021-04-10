@@ -124,7 +124,7 @@ MonoBehaviour:
   Asleep: 0
   HealthUpRate: 2
   PAUpRate: 1
-  MAUpRate: 2
+  MAUpRate: 3
   PDUpRate: 1
   MDUpRate: 2
   SpeedUpRate: 2

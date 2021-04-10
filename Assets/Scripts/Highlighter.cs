@@ -9,6 +9,7 @@ public class Highlighter : MonoBehaviour
 {
     private SpriteShapeRenderer shr;
     public static string BGIndex;       //background index for eventual fight
+    public static string critIndex;     //crit index for eventual fight
     FightLoaderOut fightLoader;         //reference to fight loader game object
 
     private void Awake()
@@ -35,10 +36,10 @@ public class Highlighter : MonoBehaviour
     private void OnMouseUpAsButton()
     {
         Debug.Log("click");
-        Search();
-
-        if (gameObject.tag.Equals("Decoration"))
+        
+        if (transform.parent.gameObject.tag.Equals("Decoration"))
         {
+            Search();
         }
     }
 
@@ -55,11 +56,8 @@ public class Highlighter : MonoBehaviour
         //needs to be passed to next scene so that 
         //we can return to this one 
         string scene = SceneManager.GetActiveScene().name.ToLower();
-        //setting the bgindex based on the fight caller scene
-        if(scene.Contains("forest") || scene.Contains("plain"))
-        {
-            BGIndex = "forest";
-        }
+        
+
 
         //probability of search result
         //85% fight
@@ -75,6 +73,38 @@ public class Highlighter : MonoBehaviour
         {
             case "Encounter":
                 Debug.Log("click");
+                //setting the bgindex based on the fight caller scene
+                if (scene.Contains("forest") || scene.Contains("plain"))
+                {
+                    BGIndex = "forest";
+                }
+
+                //setting the critIndex based on the fight caller scene
+                if (scene.Contains("forest"))
+                {
+                    critIndex = "forest";
+                }
+                if (scene.Contains("plain"))
+                {
+                    critIndex = "plain";
+                }
+                if (scene.Contains("desert"))
+                {
+                    critIndex = "desert";
+                }
+                if (scene.Contains("mount"))
+                {
+                    critIndex = "mount";
+                }
+                if (scene.Contains("cave"))
+                {
+                    critIndex = "cave";
+                }
+                if (scene.Contains("temple"))
+                {
+                    critIndex = "temple";
+                }
+
                 fightLoader.LoadFight("Transition1_start");
                 break;
         }

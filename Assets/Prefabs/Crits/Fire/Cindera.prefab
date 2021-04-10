@@ -126,7 +126,7 @@ MonoBehaviour:
   PAUpRate: 3
   MAUpRate: 3
   PDUpRate: 2
-  MDUpRate: 2
+  MDUpRate: 1
   SpeedUpRate: 0
   CritXpValue: 0
   skills:
