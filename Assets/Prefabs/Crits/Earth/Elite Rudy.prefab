@@ -63,6 +63,7 @@ MonoBehaviour:
   critType: 0
   level: 1
   xp: 0
+  MaxHealth: 16
   health: 16
   physicalAttack: 11
   magicAttack: 8

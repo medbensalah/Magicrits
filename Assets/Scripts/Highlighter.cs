@@ -11,6 +11,7 @@ public class Highlighter : MonoBehaviour
     public static string BGIndex;       //background index for eventual fight
     public static string critIndex;     //crit index for eventual fight
     FightLoaderOut fightLoader;         //reference to fight loader game object
+    bool searched = false;              //keep track if object is searchable again
 
     private void Awake()
     {
@@ -23,23 +24,34 @@ public class Highlighter : MonoBehaviour
     //when hovering on the collider the gameobject is highlighted
     void OnMouseEnter()
     {
-        shr.color = new Color32(255, 255, 255, 100);
-        MouseCursorManager.fightCursorBool = true;
+        if (!searched)
+        {
+            shr.color = new Color32(255, 255, 255, 100);
+            MouseCursorManager.fightCursorBool = true;
+        }
     }
     void OnMouseExit()
     {
-        shr.color = new Color32(255, 255, 255, 0);
-        MouseCursorManager.fightCursorBool = false;
+        if (!searched)
+        {
+            shr.color = new Color32(255, 255, 255, 0);
+            MouseCursorManager.fightCursorBool = false;
+        }
     }
 
     //action on mouse up
     private void OnMouseUpAsButton()
     {
         Debug.Log("click");
-        
-        if (transform.parent.gameObject.tag.Equals("Decoration"))
+        if (!searched)
         {
-            Search();
+            if (transform.parent.gameObject.tag.Equals("Decoration"))
+            {
+                shr.color = new Color32(255, 255, 255, 0);
+                MouseCursorManager.fightCursorBool = false;
+                searched = true;
+                Search();
+            }
         }
     }
 

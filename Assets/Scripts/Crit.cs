@@ -39,6 +39,8 @@ public class Crit : MonoBehaviour
     public int Level { get { return level; } set { level = value; } }
     public int Xp { get { return xp; } set { xp = value; } }
 
+
+    public int MaxHealth;
     [SerializeField] private int health;
     [SerializeField] private int physicalAttack;
     [SerializeField] private int magicAttack;
@@ -163,7 +165,6 @@ public class Crit : MonoBehaviour
 
     //Skills
     [SerializeField] public List<MonoBehaviour> skills;
-
 
     public void TakeDamage(int value)
     {

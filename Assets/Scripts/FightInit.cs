@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,20 +13,27 @@ public class FightInit : MonoBehaviour
     public GameObject[] enemies = new GameObject[50];
 
     //place holders
-    public GameObject[] placeholder = new GameObject[2];
     public GameObject enemyCrit;
-    public GameObject player;
+    public GameObject playerCrit;
     public GameObject enemyInfo;
     public GameObject playerInfo;
 
     SpriteRenderer sr;
     public Animator animator;
+    public Animator enemyAnimator;
+    public Animator playerAnimator;
+
+    //Types sprite
+    public Sprite[] elements = new Sprite[9];
 
     // Start is called before the first frame update
     void Start()
     {
+
         //animation to enter the fight scene
         animator.Play("Transition1_end");
+        enemyAnimator.Play("Deploy");
+        playerAnimator.Play("Deploy 1");
     }
 
     private void Awake()
@@ -142,10 +150,31 @@ public class FightInit : MonoBehaviour
         {
             enemy = Random.Range(77, 101);
         }
-        Crit critScript = enemyCrit.GetComponent<Crit>();
-        critScript = enemies[enemy].GetComponent<Crit>();
-        enemyCrit.GetComponent<SpriteRenderer>().sprite = critScript.ActiveSprite;
 
-        var enemyFrame = enemyInfo.transform.GetChild(0).GetComponent<Image>().sprite = critScript.ActiveFrame;
+        //Enemy init
+        Crit enemyCritScript = enemyCrit.GetComponent<Crit>();
+        enemyCritScript = enemies[enemy].GetComponent<Crit>();
+        enemyCrit.GetComponent<SpriteRenderer>().sprite = enemyCritScript.ActiveSprite;
+
+        var enemyFrame = enemyInfo.transform.GetChild(0).GetComponent<Image>().sprite = enemyCritScript.ActiveFrame;
+
+        enemyInfo.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(enemyCritScript.name);
+        enemyInfo.transform.GetChild(3).GetComponent<TextMeshProUGUI>().SetText(string.Format(
+            enemyCritScript.GetComponent<Crit>().Health.ToString() + "/" + enemyCritScript.GetComponent<Crit>().MaxHealth.ToString()
+        ));
+        enemyInfo.transform.GetChild(4).GetComponent<Image>().sprite = elements[(int) enemyCritScript.CritType];
+        
+        //Player init
+        Crit playerCritScript = playerCrit.GetComponent<Crit>();
+        playerCritScript = PlayerTeam.team[0].GetComponent<Crit>(); //******
+        playerCrit.GetComponent<SpriteRenderer>().sprite = playerCritScript.ActiveSprite;
+
+        var playerFrame = playerInfo.transform.GetChild(0).GetComponent<Image>().sprite = playerCritScript.ActiveFrame;
+
+        playerInfo.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(playerCritScript.name);
+        playerInfo.transform.GetChild(3).GetComponent<TextMeshProUGUI>().SetText(string.Format(
+            playerCritScript.GetComponent<Crit>().Health.ToString() + "/" + playerCritScript.GetComponent<Crit>().MaxHealth.ToString()
+        ));
+        playerInfo.transform.GetChild(4).GetComponent<Image>().sprite = elements[(int) playerCritScript.CritType];
     }
 }

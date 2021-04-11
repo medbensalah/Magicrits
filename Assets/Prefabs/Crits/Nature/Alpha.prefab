@@ -113,6 +113,7 @@ MonoBehaviour:
   critType: 5
   level: 1
   xp: 0
+  MaxHealth: 16
   health: 16
   physicalAttack: 9
   magicAttack: 8
@@ -123,7 +124,7 @@ MonoBehaviour:
   Confused: 0
   Asleep: 0
   HealthUpRate: 3
-  PAUpRate: 3
+  PAUpRate: 4
   MAUpRate: 2
   PDUpRate: 2
   MDUpRate: 3
