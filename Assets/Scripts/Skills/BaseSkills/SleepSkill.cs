@@ -5,14 +5,12 @@ using UnityEngine;
 public class SleepSkill : MonoBehaviour, ISkill
 {
     public int skillValue;          //base skill value
-    public string description;      //skill description
     public int accuracy;            //base skill accuracy
 
-    public SleepSkill(int val = 2, int acc = 50, string desc = null)
+    public SleepSkill(int val = 2, int acc = 50)
     {
         skillValue = val;
         accuracy = acc;
-        description = desc;
     }
 
     public void execute(Crit caster, Crit target)
@@ -24,6 +22,7 @@ public class SleepSkill : MonoBehaviour, ISkill
             //put the target to sleep
             //TODO animation
             target.InflictSleep(skillValue);
+            return;
         }
         target.miss();
     }

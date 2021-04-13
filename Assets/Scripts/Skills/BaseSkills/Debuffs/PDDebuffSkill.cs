@@ -6,16 +6,13 @@ public class PDDebuffSkill : MonoBehaviour, ISkill
 {
     //skill's base value
     public int skillValue;
-    //skill's effect description
-    public string description;
     //skill's base accuracy
     public int accuracy;
 
-    public PDDebuffSkill(int val, int acc = 100, string desc = null)
+    public PDDebuffSkill(int val, int acc = 100)
     {
         skillValue = val;
         accuracy = acc;
-        description = desc;
     }
 
     public void execute(Crit caster, Crit target)
@@ -25,6 +22,7 @@ public class PDDebuffSkill : MonoBehaviour, ISkill
         {
             //TODO animation
             target.DecreasePD(skillValue);
+            return;
         }
         target.miss();
     }

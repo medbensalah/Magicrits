@@ -6,16 +6,13 @@ public class AccuracyBuffSkill : MonoBehaviour, ISkill
 {
     //skill's base value
     public int skillValue;
-    //skill's effect description
-    public string description;
     //skill's base accuracy
     public int accuracy;
 
-    public AccuracyBuffSkill(int val, int acc = 100, string desc = null)
+    public AccuracyBuffSkill(int val, int acc = 100)
     {
         skillValue = val;
         accuracy = acc;
-        description = desc;
     }
 
     public void execute(Crit caster, Crit target)
@@ -25,6 +22,7 @@ public class AccuracyBuffSkill : MonoBehaviour, ISkill
         {
             //TODO animation
             target.IncreaseAccuracy(skillValue);
+            return;
         }
         target.miss();
     }

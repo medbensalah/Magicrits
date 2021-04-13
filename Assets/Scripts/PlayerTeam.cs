@@ -21,7 +21,7 @@ public class PlayerTeam : MonoBehaviour
                 team.Add(critStorage.Magicrits.Where(x => x.name.Equals("Lumera")).First());
                 break;
             case 1:
-                team.Add(critStorage.Magicrits.Where(x => x.name.Equals("CubSprout")).First());
+                team.Add(critStorage.Magicrits.Where(x => x.name.Equals("Cubsprout")).First());
                 choice = 1;
                 break;
             case 2:

@@ -15,10 +15,6 @@ public class ChooseCrit : MonoBehaviour
     private void FixedUpdate()
     {
         Select();
-        if (Input.GetMouseButtonUp(0))
-        {
-            Choose();
-        }
     }
 
     public void Select()
@@ -31,18 +27,38 @@ public class ChooseCrit : MonoBehaviour
             {
                 case "Lumera":
                     selected = 0;
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        Choose();
+                    }
                     break;
                 case "Cubsprout":
                     selected = 1;
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        Choose();
+                    }
                     break;
                 case "Bubbles":
                     selected = 2;
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        Choose();
+                    }
                     break;
                 case "Flutterpat":
                     selected = 3;
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        Choose();
+                    }
                     break;
                 case "Hoopty":
                     selected = 4;
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        Choose();
+                    }
                     break;
             }
         }
@@ -56,27 +72,8 @@ public class ChooseCrit : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         Color currentColor = GetComponent<Light2D>().color;
-        if (hit.collider != null)
-        {
-            switch (hit.collider.gameObject.GetComponent<Crit>().name)
-            {
-                case "Lumera":
-                    choice = 0;
-                    break;
-                case "Cubsprout":
-                    choice = 1;
-                    break;
-                case "Bubbles":
-                    choice = 2;
-                    break;
-                case "Flutterpat":
-                    choice = 3;
-                    break;
-                case "Hoopty":
-                    choice = 4;
-                    break;
-            }
-        }
+        choice = selected;
+        
         SceneManager.LoadScene("Plains1");
     }    
 }

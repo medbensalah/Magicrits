@@ -6,16 +6,13 @@ public class MABuffSkill : MonoBehaviour, ISkill
 {
     //skill's base value
     public int skillValue;
-    //skill's effect description
-    public string description;
     //skill's base accuracy
     public int accuracy;
 
-    public MABuffSkill(int val, int acc = 100, string desc = null)
+    public MABuffSkill(int val, int acc = 100)
     {
         skillValue = val;
         accuracy = acc;
-        description = desc;
     }
     public void execute(Crit caster, Crit target)
     {
@@ -24,6 +21,7 @@ public class MABuffSkill : MonoBehaviour, ISkill
         {
             //TODO animation
             target.IncreaseMA(skillValue);
+            return;
         }
         target.miss();
     }

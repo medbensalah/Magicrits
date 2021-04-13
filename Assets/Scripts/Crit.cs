@@ -59,11 +59,11 @@ public class Crit : MonoBehaviour
         get
         {
             int mod = 0;
-            foreach (var modififer in PAMods)
+            foreach (var modifier in PAMods)
             {
-                mod += modififer.value;
+                mod += modifier.Value;
             }
-            return physicalAttack + mod;
+            return physicalAttack + mod > 0 ? physicalAttack + mod : 1;
         }
         set { physicalAttack = value; }
     }
@@ -72,11 +72,11 @@ public class Crit : MonoBehaviour
         get
         {
             int mod = 0;
-            foreach (var modififer in MAMods)
+            foreach (var modifier in MAMods)
             {
-                mod += modififer.value;
+                mod += modifier.Value;
             }
-            return magicAttack + mod;
+            return magicAttack + mod > 0 ? magicAttack + mod : 1;
         }
         set { magicAttack = value; }
     }
@@ -85,11 +85,11 @@ public class Crit : MonoBehaviour
         get
         {
             int mod = 0;
-            foreach (var modififer in PDMods)
+            foreach (var modifier in PDMods)
             {
-                mod += modififer.value;
+                mod += modifier.Value;
             }
-            return physicalDefense + mod;
+            return physicalDefense + mod > 0 ? physicalDefense + mod : 1;
         }
         set { physicalDefense = value; }
     }
@@ -98,11 +98,11 @@ public class Crit : MonoBehaviour
         get
         {
             int mod = 0;
-            foreach (var modififer in MDMods)
+            foreach (var modifier in MDMods)
             {
-                mod += modififer.value;
+                mod += modifier.Value;
             }
-            return magicDefense + mod;
+            return magicDefense + mod > 0 ? magicDefense + mod : 1;
         }
         set { magicDefense = value; }
     }
@@ -111,11 +111,11 @@ public class Crit : MonoBehaviour
         get
         {
             int mod = 0;
-            foreach (var modififer in SpeedMods)
+            foreach (var modifier in SpeedMods)
             {
-                mod += modififer.value;
+                mod += modifier.Value;
             }
-            return speed + mod;
+            return speed + mod > 0 ? speed + mod : 1;
         }
         set { speed = value; }
     }
@@ -124,11 +124,11 @@ public class Crit : MonoBehaviour
         get
         {
             int mod = 0;
-            foreach (var modififer in AccuracyMods)
+            foreach (var modifier in AccuracyMods)
             {
-                mod += modififer.value;
+                mod += modifier.Value;
             }
-            return accuracy + mod;
+            return accuracy + mod > 0 ? accuracy + mod : 1;
         }
         set { accuracy = value; }
     }
@@ -152,13 +152,19 @@ public class Crit : MonoBehaviour
     public ICritController controller;
 
     //Queues to store all stat modifications
+
     //as they are not permanent they'll be temporarily stored during battle
-    Queue<StatsMod> PAMods = new Queue<StatsMod>();
-    Queue<StatsMod> PDMods = new Queue<StatsMod>();
-    Queue<StatsMod> MAMods = new Queue<StatsMod>();
-    Queue<StatsMod> MDMods = new Queue<StatsMod>();
-    Queue<StatsMod> SpeedMods = new Queue<StatsMod>();
-    Queue<StatsMod> AccuracyMods = new Queue<StatsMod>();
+    public Queue<StatsMod> PAMods = new Queue<StatsMod>();
+    public Queue<StatsMod> PDMods = new Queue<StatsMod>();
+    public Queue<StatsMod> MAMods = new Queue<StatsMod>();
+    public Queue<StatsMod> MDMods = new Queue<StatsMod>();
+    public Queue<StatsMod> SpeedMods = new Queue<StatsMod>();
+    public Queue<StatsMod> AccuracyMods = new Queue<StatsMod>();
+
+    //Effects over time
+    public Queue<Poison> poisonQueue = new Queue<Poison>();     //poison
+    public Queue<DoT> DOTQueue = new Queue<DoT>();        //damage over time
+    public Queue<HoT> HOTQueue = new Queue<HoT>();        //heal over time
 
     //current XP
     public int CritXpValue;
@@ -166,8 +172,93 @@ public class Crit : MonoBehaviour
     //Skills
     [SerializeField] public List<MonoBehaviour> skills;
 
-    public void TakeDamage(int value)
+    public void TakeDamage(int value, Type? type = null)
     {
+        //Managing elemental weaknesses
+        bool strong = false;
+        bool weak = false;
+
+        if(type == Type.Earth)
+        {
+            if(critType == Type.Wind)
+            {
+                value = (int)(value * 0.75);
+                strong = true;
+            }
+            else if(critType == Type.Lightning)
+            {
+                value = (int)(value * 1.5);
+                weak = true;
+            }
+        }
+        else if(type == Type.Lightning)
+        {
+            if(critType == Type.Earth)
+            {
+                value = (int)(value * 0.75);
+                strong = true;
+            }
+            else if(critType == Type.Wind)
+            {
+                value = (int)(value * 1.5);
+                weak = true;
+            }
+        }
+        else if(type == Type.Wind)
+        {
+            if(critType == Type.Lightning)
+            {
+                value = (int)(value * 0.75);
+                strong = true;
+            }
+            else if(critType == Type.Earth)
+            {
+                value = (int)(value * 1.5);
+                weak = true;
+            }
+        }
+        else if(type == Type.Fire)
+        {
+            if(critType == Type.Water)
+            {
+                value = (int)(value * 0.75);
+                strong = true;
+            }
+            else if(critType == Type.Nature)
+            {
+                value = (int)(value * 1.5);
+                weak = true;
+            }
+        }
+        else if(type == Type.Water)
+        {
+            if(critType == Type.Nature)
+            {
+                value = (int)(value * 0.75);
+                strong = true;
+            }
+            else if(critType == Type.Fire)
+            {
+                value = (int)(value * 1.5);
+                weak = true;
+            }
+        }
+        else if(type == Type.Nature)
+        {
+            if(critType == Type.Fire)
+            {
+                value = (int)(value * 0.75);
+                strong = true;
+            }
+            else if(critType == Type.Water)
+            {
+                value = (int)(value * 1.5);
+                weak = true;
+            }
+        }
+
+
+
         Health = (Health - value >= 0) ? Health - value : 0;
         if (Asleep != 0)
         {
@@ -181,7 +272,8 @@ public class Crit : MonoBehaviour
     }
     public void Heal(int value)
     {
-        Health = (Health + value) % (Health + 1);
+        value = Health + value > MaxHealth ? MaxHealth - Health : value;
+        Health = Health + value;
         //TODO animate 
     }
 
@@ -225,6 +317,112 @@ public class Crit : MonoBehaviour
     {
         Asleep += turns;
         //TODO animate
+    }
+
+    public void InflictPoison(int value, int turns = 3)
+    {
+        poisonQueue.Enqueue(new Poison(value, turns));
+    }
+    public void InflictDoT(int value, Type element,int turns = 3)
+    {
+        DOTQueue.Enqueue(new DoT(value, element, turns));
+    }
+    public void InflictHoT(int value, int turns = 3)
+    {
+        HOTQueue.Enqueue(new HoT(value, turns));
+    }
+
+    public void ProcessPoison()
+    {
+        foreach(Poison p in poisonQueue)
+        {
+            TakeDamage(p.Value + Random.Range(-2, 2));
+            p.Turns--;
+            if(p.Turns <= 0)
+            {
+                poisonQueue.Dequeue();
+            }
+        }
+    }
+    public void ProcessDoT()
+    {
+        foreach(DoT dot in DOTQueue)
+        {
+            TakeDamage(dot.Value + Random.Range(-3, 3), dot.Element);
+            dot.Turns--;
+            if(dot.Turns <= 0)
+            {
+                DOTQueue.Dequeue();
+            }
+        }
+    }
+    public void ProcessHoT()
+    {
+        foreach (HoT hot in HOTQueue)
+        {
+            Heal(hot.Value);
+            hot.Turns--;
+            if (hot.Turns <= 0)
+            {
+                HOTQueue.Dequeue();
+            }
+        }
+    }
+
+    public void advanceTurn()
+    {
+        foreach(StatsMod mod in PAMods)
+        {
+            mod.Turns--;
+            if(mod.Turns <= 0)
+            {
+                PAMods.Dequeue();
+            }
+        }
+        foreach(StatsMod mod in MAMods)
+        {
+            mod.Turns--;
+            if(mod.Turns <= 0)
+            {
+                MAMods.Dequeue();
+            }
+        }
+        foreach(StatsMod mod in PDMods)
+        {
+            mod.Turns--;
+            if(mod.Turns <= 0)
+            {
+                PDMods.Dequeue();
+            }
+        }
+        foreach(StatsMod mod in MDMods)
+        {
+            mod.Turns--;
+            if(mod.Turns <= 0)
+            {
+                MDMods.Dequeue();
+            }
+        }
+        foreach(StatsMod mod in AccuracyMods)
+        {
+            mod.Turns--;
+            if(mod.Turns <= 0)
+            {
+                AccuracyMods.Dequeue();
+            }
+        }
+        foreach(StatsMod mod in SpeedMods)
+        {
+            mod.Turns--;
+            if(mod.Turns <= 0)
+            {
+                SpeedMods.Dequeue();
+            }
+        }
+
+        ProcessPoison();
+        ProcessDoT();
+        ProcessHoT();
     }
 
     public void IncreasePA(int value)
@@ -274,14 +472,49 @@ public class Crit : MonoBehaviour
     //and the remaining turns before they go down
     public class StatsMod
     {
-        public int value { get; set; }
-        public int turns { get; set; }
-        public Mod type { get; set; }
+        public int Value { get; set; }
+        public int Turns { get; set; }
+        public Mod Type { get; set; }
         public StatsMod(int value, Mod type, int turns = 5)
         {
-            this.value = value;
-            this.type = type;
-            this.turns = turns;
+            this.Value = value;
+            this.Type = type;
+            this.Turns = turns;
+        }
+    }
+    public class Poison
+    {
+        public int Value { get; set; }
+        public int Turns { get; set; }
+
+        public Poison(int val, int turns)
+        {
+            Value = val;
+            Turns = turns;
+        }
+    }
+    public class DoT
+    {
+        public int Value { get; set; }
+        public int Turns { get; set; }
+        public Type Element { get; set; }
+
+        public DoT(int val, Type element, int turns)
+        {
+            Value = val;
+            Turns = turns;
+            Element = element;
+        }
+    }
+    public class HoT
+    {
+        public int Value { get; set; }
+        public int Turns { get; set; }
+
+        public HoT(int val, int turns)
+        {
+            Value = val;
+            Turns = turns;
         }
     }
 }

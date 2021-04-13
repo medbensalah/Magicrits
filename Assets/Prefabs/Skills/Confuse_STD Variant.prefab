@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &747862064574765922
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4990700346609063499, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: m_Name
+      value: Confuse_STD Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383799628625303691, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383799628625303691, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383799628625303691, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383799628625303691, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383799628625303691, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383799628625303691, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383799628625303691, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383799628625303691, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383799628625303691, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383799628625303691, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383799628625303691, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498447780918407873, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: acc
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498447780918407873, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: val
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498447780918407873, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: name
+      value: Confuse
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498447780918407873, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: type
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498447780918407873, guid: 273a0e2ced40b6d42b3830af0502aa0c,
+        type: 3}
+      propertyPath: Description
+      value: Confuse the enemy for 2 turns
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 273a0e2ced40b6d42b3830af0502aa0c, type: 3}

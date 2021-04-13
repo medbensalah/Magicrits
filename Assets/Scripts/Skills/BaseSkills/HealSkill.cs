@@ -5,14 +5,12 @@ using UnityEngine;
 public class HealSkill : MonoBehaviour, ISkill
 {
     public int skillValue;          //base skill value
-    public string description;      //skill description
     public int accuracy;            //base skill accuracy
 
-    public HealSkill(int val, int acc = 100, string desc = null)
+    public HealSkill(int val, int acc = 100)
     {
         skillValue = val;
         accuracy = acc;
-        description = desc;
     }
 
     public void execute(Crit caster, Crit target)
@@ -24,6 +22,7 @@ public class HealSkill : MonoBehaviour, ISkill
             //heal the target
             //TODO anomation
             target.Heal(skillValue);
+            return;
         }
         target.miss();
     }

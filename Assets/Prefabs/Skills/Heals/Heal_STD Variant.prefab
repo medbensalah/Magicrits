@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5003518496362158554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3978866938585794897, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: m_Name
+      value: Heal_STD
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427115519526943141, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: acc
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427115519526943141, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: val
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427115519526943141, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: name
+      value: Blessing of Miscria
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427115519526943141, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: type
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427115519526943141, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: Description
+      value: Chance to heal for 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626572160555131412, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626572160555131412, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626572160555131412, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626572160555131412, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626572160555131412, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626572160555131412, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626572160555131412, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626572160555131412, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626572160555131412, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626572160555131412, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626572160555131412, guid: d80cc77445eb23440a921f8a4506caad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d80cc77445eb23440a921f8a4506caad, type: 3}
