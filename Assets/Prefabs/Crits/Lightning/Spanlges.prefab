@@ -125,22 +125,22 @@ MonoBehaviour:
   Asleep: 0
   HealthUpRate: 2
   PAUpRate: 2
-  MAUpRate: 0
+  MAUpRate: 4
   PDUpRate: 3
   MDUpRate: 3
   SpeedUpRate: 3
   CritXpValue: 0
   skills:
-  - {fileID: 7361709996021861764, guid: 6e55a05c163f9ab44bed0fbfc13def14, type: 3}
-  - {fileID: 6806820068520171408, guid: 9998059348e582a42a32f16d6b470ae9, type: 3}
-  - {fileID: 1874518155276793890, guid: 40bafd97dabfdcc42982a661b6b5bd69, type: 3}
-  - {fileID: 1783909452293537860, guid: 80272dec1225d4741830e1de0b68d855, type: 3}
-  - {fileID: 2217211580491731998, guid: 46a68c120e4ee524eb037732ccda2ffd, type: 3}
-  - {fileID: 1883865728693529403, guid: 08903671fdc9836429dec6ba60434ffa, type: 3}
-  - {fileID: 2627947083218740899, guid: 0cd61df939e7d9745acb4c58bbd0f21d, type: 3}
-  - {fileID: 3186803636025793383, guid: fa50a465ba3ad3a4cb19dcf2681d7538, type: 3}
-  - {fileID: 3085205994520696471, guid: c7d8c9541ee68584f8f84dfa7edce744, type: 3}
-  - {fileID: 3205984740614507145, guid: 0b8685c6ce5d2224b8c77748a3cf9cf5, type: 3}
-  - {fileID: 4403183786670692772, guid: 47b6df0bbe79ffb4d93dc2396fa6c0ce, type: 3}
-  - {fileID: 2076087828387249597, guid: f59cd02119fa78643b5f558e643267b2, type: 3}
-  - {fileID: 3037930865448749795, guid: ce8caed2cc8ba81428fb7cb4a16c41e1, type: 3}
+  - {fileID: 435032063179932013, guid: 491c5df569158744c8933da51b52964a, type: 3}
+  - {fileID: 1266600370187963203, guid: 86c14dbddcfbcd546a454252a0b54321, type: 3}
+  - {fileID: 2034254829764630786, guid: e6b593706a8307c4f9a025ef275ea321, type: 3}
+  - {fileID: 3639095754716818471, guid: 5a42d330c0c7bce4c91f4ca4ce44e147, type: 3}
+  - {fileID: 1401772825177221250, guid: 801ce8f7e8e1a0543ab19a22610e4723, type: 3}
+  - {fileID: 9191985030977628579, guid: e46f4830e97a5ce4189699aa0c148037, type: 3}
+  - {fileID: 2946585952766717419, guid: b7e4e5d06032eec4c830ebc142cf0007, type: 3}
+  - {fileID: 251122159524139129, guid: 78d397f3be3368345a6ece5058ce5e88, type: 3}
+  - {fileID: 5144227428905327594, guid: 92ebc38c63c5d104fac31677c60161b7, type: 3}
+  - {fileID: 4261695234377404905, guid: 864140ea3ec3e3749a971ebf9db14f55, type: 3}
+  - {fileID: 6992049780355690728, guid: 66972c601bd31f646a3d9cc0b58bc95b, type: 3}
+  - {fileID: 5160598334508852895, guid: 0f7cfb9dd9c780d4da2e0c54577a0546, type: 3}
+  - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}

@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1421256340505960117
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1716498894546727725, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: val
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716498894546727725, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: name
+      value: Wild instinct
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716498894546727725, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: turns
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716498894546727725, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: Description
+      value: 20 Nature Damage over time for 3 turns
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976941991764325647, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976941991764325647, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976941991764325647, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976941991764325647, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976941991764325647, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976941991764325647, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976941991764325647, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976941991764325647, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976941991764325647, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976941991764325647, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976941991764325647, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389418806403908964, guid: 8518a67fee5225e48925315d6d1b8b4c,
+        type: 3}
+      propertyPath: m_Name
+      value: DoT_STD
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8518a67fee5225e48925315d6d1b8b4c, type: 3}

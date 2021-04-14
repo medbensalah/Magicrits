@@ -22,11 +22,11 @@ public class FightInit : MonoBehaviour
     public GameObject playerInfo;
 
     //Skill slots
-    public GameObject[] skillSlots1 = new GameObject[4];
-    public GameObject[] skillSlots2 = new GameObject[4];
-    public GameObject[] skillSlots3 = new GameObject[4];
-    public GameObject[] skillSlots4 = new GameObject[4];
-    public GameObject[] skillSlots5 = new GameObject[4];
+    public GameObject[] skillSlots = new GameObject[4];
+    public SkillInfo[] skillInfo = new SkillInfo[13];
+    public int pages = 1;
+    public int currentPage = 1;
+    public int nbSkills;
 
     //SkillSprites
     public Sprite locked;
@@ -34,13 +34,15 @@ public class FightInit : MonoBehaviour
     public Sprite golden;
     public Sprite none;
 
+    public Sprite noSymbol;
+
     SpriteRenderer sr;
     public Animator animator;
     public Animator enemyAnimator;
     public Animator playerAnimator;
 
     //Types sprite
-    public Sprite[] elements = new Sprite[9];
+    public Sprite[] elements = new Sprite[13];
 
     // Start is called before the first frame update
     void Start()
@@ -208,53 +210,50 @@ public class FightInit : MonoBehaviour
 
     public void ParseSkills(Crit crit)
     {
-        int lvl = crit.Level;
-        switch (lvl <= 1? 2 :
-            lvl <= 4 ? 3 :
-            lvl <= 7 ? 4 :
-            lvl <= 10 ? 5 :
-            lvl <= 13 ? 6 :
-            lvl <= 16 ? 7 :
-            lvl <= 19 ? 8 :
-            lvl <= 22 ? 9 :
-            lvl <= 25 ? 10 :
-            lvl <= 28 ? 11 :
-            lvl <= 30 ? 12 : 13)
-        {
-            case 2:
-                Debug.Log(crit.skills[0].GetType().GetField("name").GetValue(crit.skills[0]));
-                Debug.Log(crit.skills[0].GetType().GetField("Description").GetValue(crit.skills[0]));
-                Debug.Log(crit.skills[0].GetType().GetField("val").GetValue(crit.skills[0]));
-                Debug.Log(crit.skills[0].GetType().GetField("acc").GetValue(crit.skills[0]));
-                skillSlots1[1].GetComponent<Image>().sprite = available;
-                //       skillSlots1[1].GetComponentInChildren<TextMeshProUGUI>().text = 
-                //           crit.skills[0].GetType().GetField("name").GetValue(crit.skills[0]).ToString();
-                
 
-                skillSlots1[1].GetComponent<Image>().sprite = available;
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
-            case 8:
-                break;
-            case 9:
-                break;
-            case 10:
-                break;
-            case 11:
-                break;
-            case 12:
-                break;
-            case 13:
-                break;
+        for (int i = 0; i < 13; ++i)
+        {
+            skillInfo[i] = new SkillInfo(crit.skills[i]);
+        }
+
+        int lvl = crit.Level;
+        nbSkills = lvl <= 1 ? 2 :
+                       lvl <= 4 ? 3 :
+                       lvl <= 7 ? 4 :
+                       lvl <= 10 ? 5 :
+                       lvl <= 13 ? 6 :
+                       lvl <= 16 ? 7 :
+                       lvl <= 19 ? 8 :
+                       lvl <= 22 ? 9 :
+                       lvl <= 25 ? 10 :
+                       lvl <= 28 ? 11 :
+                       lvl <= 30 ? 12 : 13;
+        pages = (int)System.Math.Ceiling(((double)nbSkills) / 4);
+        Debug.Log(pages);
+        for(int i = 0; i < System.Math.Max(System.Math.Min(4, nbSkills), nbSkills % 4); ++i)
+        {
+            skillSlots[i].GetComponent<Image>().sprite = available;
+            skillSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = skillInfo[nbSkills - (i + 4 * (currentPage - 1)) - 1].name;
+            skillSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = elements[skillInfo[nbSkills - (i + 4 * (currentPage - 1)) - 1].type];
+        }
+    }
+
+
+    public class SkillInfo
+    {
+        public int type;
+        public int value;
+        public int accuracy;
+        public string description;
+        public string name;
+
+        public SkillInfo(MonoBehaviour skill)
+        {
+            name = skill.GetType().GetField("name").GetValue(skill).ToString();
+            description = skill.GetType().GetField("Description").GetValue(skill).ToString();
+            type = (int) skill.GetType().GetField("type").GetValue(skill);
+            value = (int) skill.GetType().GetField("val").GetValue(skill);
+            accuracy = (int) skill.GetType().GetField("acc").GetValue(skill);
         }
     }
 }

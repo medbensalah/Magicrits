@@ -117,8 +117,8 @@ MonoBehaviour:
   MaxHealth: 15
   health: 15
   physicalAttack: 6
-  magicAttack: 9
-  physicalDefense: 3
+  magicAttack: 8
+  physicalDefense: 6
   magicDefense: 5
   speed: 6
   accuracy: 100
@@ -132,16 +132,16 @@ MonoBehaviour:
   SpeedUpRate: 4
   CritXpValue: 0
   skills:
-  - {fileID: 3052123779666340735, guid: 5211defeb01fe4d4f8ef3b737a0972be, type: 3}
-  - {fileID: 2097992566330543134, guid: e6e3a252dd29f774aaa90bd5310a437c, type: 3}
-  - {fileID: 5551900339313483589, guid: ee6a55523ecd9bf449af3f1d6444f521, type: 3}
-  - {fileID: 8729859318149465717, guid: 72007846fbefd84438e361177e82de49, type: 3}
-  - {fileID: 2409700661648160048, guid: ebcbd5bd4b38f864581ee2a8b39d6363, type: 3}
-  - {fileID: 3900112378839295503, guid: 343344ffc60fc314080708920f9c1373, type: 3}
-  - {fileID: 1311509149845600244, guid: 4111b39281d380f47bb5897154adf683, type: 3}
-  - {fileID: 4766410508091430217, guid: edc975ff384efc945bc63890b44bb96c, type: 3}
-  - {fileID: 5176362869046015429, guid: dad9927099d26f34a8b3808b3cc91e27, type: 3}
-  - {fileID: 4238544946566672225, guid: 065b4ddcab1ae984485530f346cbef98, type: 3}
-  - {fileID: 8228544228685494109, guid: 82dd4b70f809c8d4aa507ed04a55bfda, type: 3}
-  - {fileID: 788686893053306046, guid: abaad9f25897a4144bc4978d604923fa, type: 3}
-  - {fileID: 3037930865448749795, guid: ce8caed2cc8ba81428fb7cb4a16c41e1, type: 3}
+  - {fileID: 6968506259318454089, guid: 49d7ade56362ab240bd65908ddb893bb, type: 3}
+  - {fileID: 3858535776661241019, guid: 61184cf4969a63446a4cd0a5709b78b2, type: 3}
+  - {fileID: 6461491035488996090, guid: 9aba66096eae1ed49b5a95481dfc82df, type: 3}
+  - {fileID: 251122159524139129, guid: 78d397f3be3368345a6ece5058ce5e88, type: 3}
+  - {fileID: 4767805734429083793, guid: 930e02ebdc4b4554298374dc02905f76, type: 3}
+  - {fileID: 978633910781192828, guid: 5a6959dd377a9b64f9d4a2ecff54c6b2, type: 3}
+  - {fileID: 1203666893032766598, guid: 65278e1b47a898c438efa754a273675e, type: 3}
+  - {fileID: 1865349751072534952, guid: 8f588b5b364ccbc44ae75fcc3dd022a8, type: 3}
+  - {fileID: 5328198863728715170, guid: 2188184da4b950d48aa49d7ee12ea4bd, type: 3}
+  - {fileID: 5331098593497485711, guid: 7f32e7da3c81ed44d8963f676073d4a8, type: 3}
+  - {fileID: 2419954095080674657, guid: 55e3b6a5e70e5c24b8d2f9379adaee93, type: 3}
+  - {fileID: 7111082894409395588, guid: 807410227bb724740a2d1740a97826ae, type: 3}
+  - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}

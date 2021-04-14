@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 5702250989478038825, guid: e46f4830e97a5ce4189699aa0c148037,
         type: 3}
       propertyPath: m_Name
-      value: Confuse_STD
+      value: Confuse_STD Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 7789105512643511273, guid: e46f4830e97a5ce4189699aa0c148037,
         type: 3}
@@ -71,6 +71,11 @@ PrefabInstance:
         type: 3}
       propertyPath: val
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191985030977628579, guid: e46f4830e97a5ce4189699aa0c148037,
+        type: 3}
+      propertyPath: name
+      value: Complete confusion
       objectReference: {fileID: 0}
     - target: {fileID: 9191985030977628579, guid: e46f4830e97a5ce4189699aa0c148037,
         type: 3}

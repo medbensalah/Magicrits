@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 2456142754183317042, guid: 231400779b83ed24a86b6bf16721f05a,
         type: 3}
       propertyPath: val
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2456142754183317042, guid: 231400779b83ed24a86b6bf16721f05a,
         type: 3}
@@ -25,12 +25,12 @@ PrefabInstance:
     - target: {fileID: 2456142754183317042, guid: 231400779b83ed24a86b6bf16721f05a,
         type: 3}
       propertyPath: Description
-      value: 15 Physical damage
+      value: 20 Physical damage
       objectReference: {fileID: 0}
     - target: {fileID: 5580964936952896048, guid: 231400779b83ed24a86b6bf16721f05a,
         type: 3}
       propertyPath: m_Name
-      value: PA_STD
+      value: PA_STD Variant 6
       objectReference: {fileID: 0}
     - target: {fileID: 7270824679119128190, guid: 231400779b83ed24a86b6bf16721f05a,
         type: 3}

@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 377498438758007388, guid: 228f3fe184311be45a87ab13d048d76a,
         type: 3}
       propertyPath: name
-      value: Bombard
+      value: Light bombard
       objectReference: {fileID: 0}
     - target: {fileID: 377498438758007388, guid: 228f3fe184311be45a87ab13d048d76a,
         type: 3}
@@ -85,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 8173792899754730608, guid: 228f3fe184311be45a87ab13d048d76a,
         type: 3}
       propertyPath: m_Name
-      value: MA_STD
+      value: MA_STD Variant 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 228f3fe184311be45a87ab13d048d76a, type: 3}

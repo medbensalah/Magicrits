@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7197794113735627808
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2451865131729232822, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451865131729232822, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451865131729232822, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451865131729232822, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451865131729232822, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451865131729232822, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451865131729232822, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451865131729232822, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451865131729232822, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451865131729232822, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451865131729232822, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864559531649611783, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: val
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864559531649611783, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: name
+      value: Meditate
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864559531649611783, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: Description
+      value: Heal for 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567543134114105587, guid: a966a947c767be24586a7289bd2f3c60,
+        type: 3}
+      propertyPath: m_Name
+      value: Heal_STD
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a966a947c767be24586a7289bd2f3c60, type: 3}

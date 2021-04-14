@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &520307517730100477
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5351869052294894091, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: m_Name
+      value: Schooled
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632268483437899083, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: acc
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632268483437899083, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: val
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632268483437899083, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: name
+      value: Elite anthler smash
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632268483437899083, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: Description
+      value: 40 Physical damage + chance to wreak havoc
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281363990465757986, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281363990465757986, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281363990465757986, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281363990465757986, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281363990465757986, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281363990465757986, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281363990465757986, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281363990465757986, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281363990465757986, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281363990465757986, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281363990465757986, guid: 65b55f91ff0f7994d8d2b977af92bb5b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65b55f91ff0f7994d8d2b977af92bb5b, type: 3}
