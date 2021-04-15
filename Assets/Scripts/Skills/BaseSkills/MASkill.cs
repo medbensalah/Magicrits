@@ -9,6 +9,7 @@ public class MASkill : MonoBehaviour, ISkill
 
     public MASkill(int val, int acc = 100) 
     {
+        Debug.Log(val + " " + acc);
         skillValue = val;
         accuracy = acc;
     }
@@ -17,6 +18,7 @@ public class MASkill : MonoBehaviour, ISkill
     {
         //calculating the final value of the skill accuracy
         int random = Random.Range(0, 10000);
+        Debug.Log("executed " + accuracy +" " + caster.Accuracy);
         if (random <= accuracy * caster.Accuracy)    //if the skill hits the target
         {
             //calculating damage

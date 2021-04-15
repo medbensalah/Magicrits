@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Magic_STD : MonoBehaviour
+public class Magic_STD : MonoBehaviour, ISkill
 {
     //array of base skills
     [SerializeField] private List<ISkill> skills = new List<ISkill>();
@@ -15,9 +15,10 @@ public class Magic_STD : MonoBehaviour
 
     public Magic_STD()
     {
-        // Magic Attack Skill
         skills.Add(new MASkill(val, acc));
     }
+
+
 
     //skill execution
     public void execute(Crit caster, Crit target)

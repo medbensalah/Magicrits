@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerOfGaia : MonoBehaviour
+public class PowerOfGaia : MonoBehaviour, ISkill
 {
     //array of base skills
     [SerializeField] private List<ISkill> skills = new List<ISkill>();

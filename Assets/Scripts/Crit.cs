@@ -172,6 +172,7 @@ public class Crit : MonoBehaviour
     //Skills
     [SerializeField] public List<MonoBehaviour> skills;
 
+
     public void TakeDamage(int value, Type? type = null)
     {
         //Managing elemental weaknesses
@@ -456,6 +457,9 @@ public class Crit : MonoBehaviour
         //TODO animate
     }
 
+
+
+
     //executed when a skill misses
     public void miss()
     {
@@ -518,3 +522,6 @@ public class Crit : MonoBehaviour
         }
     }
 }
+
+
+

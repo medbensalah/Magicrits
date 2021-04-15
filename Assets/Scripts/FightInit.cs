@@ -41,6 +41,8 @@ public class FightInit : MonoBehaviour
     public Animator enemyAnimator;
     public Animator playerAnimator;
 
+    public FightManager fm;
+
     //Types sprite
     public Sprite[] elements = new Sprite[13];
 
@@ -58,6 +60,7 @@ public class FightInit : MonoBehaviour
         BackGroundInit();
         EnemyInit();
         PlayerInit();
+        fm.ChangeCrit(playerCrit);
     }
 
     public void BackGroundInit()
@@ -192,6 +195,7 @@ public class FightInit : MonoBehaviour
     }
     public void PlayerInit()
     {
+        Instantiate(PlayerTeam.team[0], GameObject.Find("Canvas").transform,);
         //Player init
         Crit playerCritScript = playerCrit.GetComponent<Crit>();
         playerCritScript = PlayerTeam.team[0].GetComponent<Crit>(); //******managing starter
@@ -235,6 +239,9 @@ public class FightInit : MonoBehaviour
             skillSlots[i].GetComponent<Image>().sprite = available;
             skillSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = skillInfo[nbSkills - (i + 4 * (currentPage - 1)) - 1].name;
             skillSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = elements[skillInfo[nbSkills - (i + 4 * (currentPage - 1)) - 1].type];
+            skillSlots[i].transform.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = skillInfo[nbSkills - (i + 4 * (currentPage - 1)) - 1].accuracy + "%";
+            skillSlots[i].transform.GetChild(2).GetChild(1).GetComponent<TextMeshProUGUI>().text = skillInfo[nbSkills - (i + 4 * (currentPage - 1)) - 1].value.ToString();
+            skillSlots[i].transform.GetChild(2).GetChild(2).GetComponent<TextMeshProUGUI>().text = skillInfo[nbSkills - (i + 4 * (currentPage - 1)) - 1].description;
         }
     }
 
@@ -247,6 +254,14 @@ public class FightInit : MonoBehaviour
         public string description;
         public string name;
 
+        public SkillInfo(ISkill skill)
+        {
+            name = skill.GetType().GetField("name").GetValue(skill).ToString();
+            description = skill.GetType().GetField("Description").GetValue(skill).ToString();
+            type = (int) skill.GetType().GetField("type").GetValue(skill);
+            value = (int) skill.GetType().GetField("val").GetValue(skill);
+            accuracy = (int) skill.GetType().GetField("acc").GetValue(skill);
+        }
         public SkillInfo(MonoBehaviour skill)
         {
             name = skill.GetType().GetField("name").GetValue(skill).ToString();

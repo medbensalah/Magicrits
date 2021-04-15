@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PADebuff_STD : MonoBehaviour
+public class PADebuff_STD : MonoBehaviour, ISkill
 {
     //array of base skills
     [SerializeField] private List<ISkill> skills = new List<ISkill>();

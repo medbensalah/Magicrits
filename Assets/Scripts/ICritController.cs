@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ICritController
 {
-
+    string GetSkill();    
 }

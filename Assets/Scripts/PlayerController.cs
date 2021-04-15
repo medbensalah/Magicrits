@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -15,6 +16,8 @@ public class PlayerController : MonoBehaviour, ICritController
     public Sprite activeRightArrow;    
     public Sprite inactiveRightArrow;
 
+    public string skillName = "";
+
     int lastPage;
 
     private int currentPage;
@@ -28,6 +31,10 @@ public class PlayerController : MonoBehaviour, ICritController
         {
             rightArrow.GetComponent<Image>().sprite = activeRightArrow;
         }
+        for (int i = 0; i < 4; ++i)
+        {
+            fightInitializer.skillSlots[i].transform.GetChild(2).gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -35,6 +42,7 @@ public class PlayerController : MonoBehaviour, ICritController
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         lastPage = 4;
+        
         if (pages > 1 && Input.GetMouseButtonDown(0))
         {
             if (hit)
@@ -64,20 +72,35 @@ public class PlayerController : MonoBehaviour, ICritController
                 lastPage = (currentPage == pages) ? fightInitializer.nbSkills % 4 : 4;
                 for (int i = 0; i < lastPage; ++i)
                 {
+                    fightInitializer.skillSlots[i].SetActive(true);
                     fightInitializer.skillSlots[i].GetComponent<Image>().sprite = fightInitializer.available;
                     fightInitializer.skillSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = fightInitializer.skillInfo[fightInitializer.nbSkills - (i + 4 * (currentPage - 1)) - 1].name;
                     fightInitializer.skillSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = fightInitializer.elements[fightInitializer.skillInfo[fightInitializer.nbSkills - (i + 4 * (currentPage - 1)) - 1].type];
+                    fightInitializer.skillSlots[i].transform.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = fightInitializer.skillInfo[fightInitializer.nbSkills - (i + 4 * (currentPage - 1)) - 1].accuracy + "%";
+                    fightInitializer.skillSlots[i].transform.GetChild(2).GetChild(1).GetComponent<TextMeshProUGUI>().text = fightInitializer.skillInfo[fightInitializer.nbSkills - (i + 4 * (currentPage - 1)) - 1].value.ToString();
+                    fightInitializer.skillSlots[i].transform.GetChild(2).GetChild(2).GetComponent<TextMeshProUGUI>().text = fightInitializer.skillInfo[fightInitializer.nbSkills - (i + 4 * (currentPage - 1)) - 1].description;
                 }
                 if (currentPage == pages)
                 {
                     for (int i = lastPage; i < 4; ++i)
                     {
-                        fightInitializer.skillSlots[i].GetComponent<Image>().sprite = fightInitializer.none;
-                        fightInitializer.skillSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = "";
-                        fightInitializer.skillSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = fightInitializer.noSymbol;
+                        fightInitializer.skillSlots[i].SetActive(false);
                     }
                 }
             }
         }
+    }
+
+    public string GetSkill()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        if (hit && Input.GetMouseButtonDown(0))
+        {
+            if (hit.collider.gameObject.name.ToLower().Contains("slot"))
+            {
+                return skillName = hit.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text;
+            }
+        }
+        return "";
     }
 }
