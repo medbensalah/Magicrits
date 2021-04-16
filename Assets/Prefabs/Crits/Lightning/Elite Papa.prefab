@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5044595233473863842}
   - component: {fileID: 5044595233473863843}
   - component: {fileID: 5044595233473863840}
+  - component: {fileID: 3874400070865903387}
   m_Layer: 0
   m_Name: Elite Papa
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 2608918614471778615, guid: 212ce7a9edcc1e9449eb21079c94285f, type: 3}
   - {fileID: 1705618391753934952, guid: 4d3c400b572b403478508cc806fb3305, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &3874400070865903387
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5044595233473863841}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

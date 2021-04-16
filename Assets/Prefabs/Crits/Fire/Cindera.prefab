@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1066089536028837011}
   - component: {fileID: 1066089536028837010}
   - component: {fileID: 1066089536028837741}
+  - component: {fileID: 3137123806216855136}
   m_Layer: 0
   m_Name: Cindera
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 2186973998049372742, guid: 7ca3e0ea931cc1741b1cb46e0eb8bc16, type: 3}
   - {fileID: 8813306650494584957, guid: 5e5c313fec787ba4ea9abdfd890aa9fb, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &3137123806216855136
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066089536028837740}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

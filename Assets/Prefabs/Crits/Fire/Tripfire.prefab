@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1982475827199971709}
   - component: {fileID: 1982475827199971708}
   - component: {fileID: 1982475827199971683}
+  - component: {fileID: 3548496621613377516}
   m_Layer: 0
   m_Name: Tripfire
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 9191985030977628579, guid: e46f4830e97a5ce4189699aa0c148037, type: 3}
   - {fileID: 4575243980064458371, guid: 7892cb1c3f9f0de4381a170c45556f5d, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &3548496621613377516
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982475827199971682}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

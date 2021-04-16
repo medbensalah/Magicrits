@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3785768896201705479}
   - component: {fileID: 3785768896201706488}
   - component: {fileID: 3785768896201706489}
+  - component: {fileID: 6296826790408515655}
   m_Layer: 0
   m_Name: Chico
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 6382043646126117887, guid: 0af0262aab02f5440a397ac4c32eb4ef, type: 3}
   - {fileID: 8335322237048366526, guid: fe988c36f629c674285c47ab191f79ea, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &6296826790408515655
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3785768896201706490}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

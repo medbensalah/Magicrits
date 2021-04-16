@@ -9,7 +9,7 @@ public class PADebuffSkill : MonoBehaviour, ISkill
     //skill's base accuracy
     public int accuracy;
 
-    public PADebuffSkill(int val, int acc = 100)
+    public void init(int val, int acc = 100)
     {
         skillValue = val;
         accuracy = acc;

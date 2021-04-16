@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1349822022345572009}
   - component: {fileID: 1349822022345572010}
   - component: {fileID: 1349822022345572011}
+  - component: {fileID: -2400399511055149142}
   m_Layer: 0
   m_Name: Aegis
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 67388415746499304, guid: 5e1ded65f487bb94ea846cb1c50f4e69, type: 3}
   - {fileID: 7850186528954462687, guid: f28c4e3dfe5c0bc44a35609c3ce000e1, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &-2400399511055149142
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349822022345571988}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

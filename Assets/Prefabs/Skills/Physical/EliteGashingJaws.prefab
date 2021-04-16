@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30fe908d0318f944d95ab35b2bbdf520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Description: 35 Physical damage + chance for heal and buff
+  Description: 7 * 5 Physical damage + chance for heal and buff
   name: Elite gashing jaws
-  val: 35
-  acc: 90
+  val: 5
+  acc: 100
   type: 6

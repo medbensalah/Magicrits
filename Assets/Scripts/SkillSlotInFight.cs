@@ -9,8 +9,11 @@ public class SkillSlotInFight : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        GetComponent<Image>().sprite = fightInitializer.golden;
-        transform.GetChild(2).gameObject.SetActive(true);
+        if (gameObject.activeSelf)
+        {
+            GetComponent<Image>().sprite = fightInitializer.golden;
+            transform.GetChild(2).gameObject.SetActive(true);
+        }
     }
 
     private void OnMouseExit()

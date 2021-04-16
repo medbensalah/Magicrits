@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,16 +14,19 @@ public class DefenseDebuff_STD : MonoBehaviour, ISkill
     public int acc;
     public SkillType type;
 
-    public DefenseDebuff_STD()
-    {
-        // Putting enemy to sleep
-        skills.Add(new PDDebuffSkill(val, acc));
-        skills.Add(new MDDebuffSkill(val, acc));
-    }
 
     //skill execution
     public void execute(Crit caster, Crit target)
     {
+        if (!skills.Any())
+        {
+            PDDebuffSkill m = new PDDebuffSkill();
+            MDDebuffSkill m1 = new MDDebuffSkill();
+            m.init(val, acc);
+            m1.init(val, acc);
+            skills.Add(m);
+            skills.Add(m1);
+        }
         foreach (ISkill skill in skills)
         {
             //executing all base skills

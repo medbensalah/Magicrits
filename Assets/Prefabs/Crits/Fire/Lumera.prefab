@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5146806835028290599}
   - component: {fileID: 5146806835028290598}
   - component: {fileID: 5146806835028290601}
+  - component: {fileID: 4615318974022693776}
   m_Layer: 0
   m_Name: Lumera
   m_TagString: Untagged
@@ -145,3 +146,22 @@ MonoBehaviour:
   - {fileID: 5321998801648583116, guid: 6bdaf0689ca801645aca20c1e72b1966, type: 3}
   - {fileID: 4712683755515555225, guid: ad6bd30c45b84034ab7fd1d6bc33fd5c, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &4615318974022693776
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5146806835028290600}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

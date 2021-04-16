@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,17 +13,19 @@ public class Drain : MonoBehaviour, ISkill
     public int val;
     public int acc;
     public SkillType type;
-
-    public Drain()
-    {
-        // Magic Attack Skill
-        skills.Add(new MASkill(val, acc));
-        skills.Add(new HealSkill(20, 100));
-    }
-
+    
     //skill execution
     public void execute(Crit caster, Crit target)
     {
+        if (!skills.Any())
+        {
+            MASkill m = new MASkill();
+            HealSkill m1 = new HealSkill();
+            m.init(val, acc);
+            m1.init(20, acc);
+            skills.Add(m);
+            skills.Add(m1);
+        }
         foreach (ISkill skill in skills)
         {
             //executing all base skills

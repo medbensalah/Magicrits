@@ -9,7 +9,7 @@ public class AccuracyBuffSkill : MonoBehaviour, ISkill
     //skill's base accuracy
     public int accuracy;
 
-    public AccuracyBuffSkill(int val, int acc = 100)
+    public void init(int val, int acc = 100)
     {
         skillValue = val;
         accuracy = acc;

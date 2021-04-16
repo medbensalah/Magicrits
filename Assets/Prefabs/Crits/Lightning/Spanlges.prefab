@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5626482796168704460}
   - component: {fileID: 5626482796168704461}
   - component: {fileID: 5626482796168704462}
+  - component: {fileID: -6447581408194068529}
   m_Layer: 0
   m_Name: Spanlges
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 6992049780355690728, guid: 66972c601bd31f646a3d9cc0b58bc95b, type: 3}
   - {fileID: 5160598334508852895, guid: 0f7cfb9dd9c780d4da2e0c54577a0546, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &-6447581408194068529
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626482796168704463}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

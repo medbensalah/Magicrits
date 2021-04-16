@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2931635641525699220}
   - component: {fileID: 2931635641525699223}
   - component: {fileID: 2931635641525699222}
+  - component: {fileID: -7442632039032494394}
   m_Layer: 0
   m_Name: Light Blaze
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 4368490824870518461, guid: f5022fa1049307342bf4ada7d20e8c11, type: 3}
   - {fileID: 962514793527198993, guid: 0a7d7ad5db0f94443987100c926eee0a, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &-7442632039032494394
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931635641525699225}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

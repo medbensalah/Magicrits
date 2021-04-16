@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3502678296133246320}
   - component: {fileID: 3502678296133246321}
   - component: {fileID: 3502678296133246322}
+  - component: {fileID: 5894576797729471091}
   m_Layer: 0
   m_Name: Elkenhoof
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 3186855035076543860, guid: 77b27c2ec3e7b634c9446e1e25b41a03, type: 3}
   - {fileID: 5528509556172357828, guid: 5fda278e98e5b5642a3388503c4f5f15, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &5894576797729471091
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3502678296133246323}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

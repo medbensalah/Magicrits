@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,15 +14,15 @@ public class Sleep_STD : MonoBehaviour, ISkill
     public int acc;
     public SkillType type;
 
-    public Sleep_STD()
-    {
-        // Putting enemy to sleep
-        skills.Add(new SleepSkill(val, acc));
-    }
-
     //skill execution
     public void execute(Crit caster, Crit target)
     {
+        if (!skills.Any())
+        {
+            SleepSkill m = new SleepSkill();
+            m.init(val, acc);
+            skills.Add(m);
+        }
         foreach (ISkill skill in skills)
         {
             //executing all base skills

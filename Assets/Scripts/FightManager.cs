@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FightManager : MonoBehaviour
 {
@@ -16,20 +17,23 @@ public class FightManager : MonoBehaviour
     public GameObject playerInfo;
     public GameObject enemyInfo;
 
-
+    public float enemyHpWidth;
+    public float enemyHpHeight;
+    
     public PlayerController playerController;
 
     private bool? playerTurn = null;
 
+    public Gradient gradient;
+
     // Start is called before the first frame update
     void Start()
     {
-        //player =
-        //fightinitializer.playerCritScript.gameObject;
-        foreach (var n in player.GetComponent<Crit>().skills)
-        {
-            Debug.Log(n.GetType().GetField("name").GetValue(n));
-        }
+        enemyHpWidth = enemyInfo.transform.GetChild(1).GetComponent<RectTransform>().sizeDelta.x;
+        enemyHpHeight = enemyInfo.transform.GetChild(1).GetComponent<RectTransform>().sizeDelta.y;
+
+        player = fightinitializer.playerCrit.gameObject;
+        enemy = fightinitializer.enemyCrit.gameObject;
         PTParams[0] = player.GetComponent<Crit>();
         PTParams[1] = enemy.GetComponent<Crit>();
         ETParams[0] = enemy.GetComponent<Crit>();
@@ -37,7 +41,7 @@ public class FightManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(playerTurn == null)
         {
@@ -46,30 +50,31 @@ public class FightManager : MonoBehaviour
         }
         if(playerTurn == true)
         {
-            //RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            //if (hit && Input.GetMouseButtonDown(0))
-            //{
-            //    string skillName;
-            //    if (hit.collider.gameObject.name.ToLower().Contains("slot"))
-            //    {
-            //        skillName = hit.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text;
-            //        var skill = player.skills.Where(x => x.GetType().GetField("name").GetValue(x).ToString().Equals(skillName)).First();
-            //        Debug.Log(skillName);
-            //        skill.GetType().GetMethod("execute").Invoke(skill, PTParams);
-            //    }
-            //}
-            string name = player.GetComponent<Crit>().controller.GetSkill();
-            if (name != "")
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            if (hit && Input.GetMouseButtonDown(0))
             {
-                Debug.Log(name);
-                // var skill = player.skills.Where(x => x.GetType().GetField("name").GetValue(x).ToString().Equals(name)).First();
-               
+                string name = player.GetComponent<Crit>().controller.GetSkill();
+                if (name != "")
+                {
+                    var skill = player.GetComponent<Crit>().skills.Where(x => x.GetType().GetField("name").GetValue(x).ToString().Equals(name)).First();
 
-        //        skill.GetType().GetMethod("execute").Invoke(skill, PTParams);
+
+                    skill.GetType().GetMethod("execute").Invoke(skill, PTParams);
+                }
+
             }
 
 
-          //  enemyInfo.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = enemy.Health + "/" + enemy.MaxHealth;
+            enemyInfo.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = enemy.GetComponent<Crit>().Health + "/" + enemy.GetComponent<Crit>().MaxHealth;
+
+            Vector2 currentSize = enemyInfo.transform.GetChild(1).GetComponent<RectTransform>().sizeDelta;
+
+            Vector2 newHpSize = new Vector2(enemy.GetComponent<Crit>().Health * enemyHpWidth / enemy.GetComponent<Crit>().MaxHealth, enemyHpHeight);
+            enemyInfo.transform.GetChild(1).GetComponent<RectTransform>().sizeDelta = Vector2.Lerp(currentSize , newHpSize, 0.07f);
+            Color current =  enemyInfo.transform.GetChild(1).GetComponent<Image>().color;
+            enemyInfo.transform.GetChild(1).GetComponent<Image>().color = Color.Lerp(current,
+                gradient.Evaluate( 1 - enemy.GetComponent<Crit>().Health * 1.0f / enemy.GetComponent<Crit>().MaxHealth),
+                Time.deltaTime);
         }
 
 

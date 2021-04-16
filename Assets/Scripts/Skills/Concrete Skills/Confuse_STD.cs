@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,15 +14,17 @@ public class Confuse_STD : MonoBehaviour, ISkill
     public int acc;
     public SkillType type;
 
-    public Confuse_STD()
-    {
-        // Confuse the enemy
-        skills.Add(new ConfuseSkill(val, acc));
-    }
 
     //skill execution
     public void execute(Crit caster, Crit target)
     {
+        if (!skills.Any())
+        {
+            ConfuseSkill m = new ConfuseSkill();
+            m.init(val, acc);
+            skills.Add(m);
+        }
+
         foreach (ISkill skill in skills)
         {
             //executing all base skills

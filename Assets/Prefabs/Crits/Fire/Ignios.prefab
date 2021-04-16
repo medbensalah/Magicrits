@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1411071083503468056}
   - component: {fileID: 1411071083503468059}
   - component: {fileID: 1411071083503468058}
+  - component: {fileID: -6932169156316135642}
   m_Layer: 0
   m_Name: Ignios
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 5641759176166392235, guid: 13153e8a3afc4a64c96cea9f3fa6a07d, type: 3}
   - {fileID: 3901771518477073596, guid: 44a5706db0d540d4d8386d9b23306230, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &-6932169156316135642
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411071083503468053}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,16 +14,19 @@ public class TaintedFlame : MonoBehaviour, ISkill
     public int acc;
     public SkillType type;
 
-    public TaintedFlame()
-    {
-        // Magic Attack Skill
-        skills.Add(new MASkill(val, acc));
-        skills.Add(new PoisonSkill(14, 70, 3));
-    }
 
     //skill execution
     public void execute(Crit caster, Crit target)
     {
+        if (!skills.Any())
+        {
+            MASkill m = new MASkill();
+            PoisonSkill m1 = new PoisonSkill();
+            m.init(val, acc);
+            m1.init(14, 70, 3);
+            skills.Add(m);
+            skills.Add(m1);
+        }
         foreach (ISkill skill in skills)
         {
             //executing all base skills

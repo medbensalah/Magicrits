@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3022313853598347615}
   - component: {fileID: 3022313853598347612}
   - component: {fileID: 3022313853598347613}
+  - component: {fileID: 1457869136876085610}
   m_Layer: 0
   m_Name: Mun Kee
   m_TagString: Untagged
@@ -145,3 +146,22 @@ MonoBehaviour:
   - {fileID: 2419954095080674657, guid: 55e3b6a5e70e5c24b8d2f9379adaee93, type: 3}
   - {fileID: 7111082894409395588, guid: 807410227bb724740a2d1740a97826ae, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &1457869136876085610
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022313853598347554}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

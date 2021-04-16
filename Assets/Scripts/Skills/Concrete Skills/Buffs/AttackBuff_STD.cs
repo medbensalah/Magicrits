@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,15 +14,18 @@ public class AttackBuff_STD : MonoBehaviour, ISkill
     public int acc;
     public SkillType type;
 
-    public AttackBuff_STD()
-    {
-        skills.Add(new PABuffSkill(val, acc));
-        skills.Add(new MABuffSkill(val, acc));
-    }
-
     //skill execution
     public void execute(Crit caster, Crit target)
     {
+        if (!skills.Any())
+        {
+            PABuffSkill m = new PABuffSkill();
+            MABuffSkill m1 = new MABuffSkill();
+            m.init(val, acc);
+            m1.init(val, acc);
+            skills.Add(m);
+            skills.Add(m1);
+        }
         foreach (ISkill skill in skills)
         {
             //executing all base skills

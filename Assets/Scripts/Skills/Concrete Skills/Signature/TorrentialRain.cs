@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,16 +14,18 @@ public class TorrentialRain : MonoBehaviour, ISkill
     public int acc;
     public SkillType type;
 
-    public TorrentialRain()
-    {
-        // Magic Attack Skill
-        skills.Add(new MASkill(val, acc));
-        skills.Add(new SleepSkill(2, 35));
-    }
-
     //skill execution
     public void execute(Crit caster, Crit target)
     {
+        if (!skills.Any())
+        {
+            MASkill m = new MASkill();
+            SleepSkill m1 = new SleepSkill();
+            m.init(val, acc);
+            m1.init(val, acc);
+            skills.Add(m);
+            skills.Add(m1);
+        }
         foreach (ISkill skill in skills)
         {
             //executing all base skills

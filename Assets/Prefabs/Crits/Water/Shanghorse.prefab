@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9076815585623146302}
   - component: {fileID: 9076815585623146303}
   - component: {fileID: 9076815585623146288}
+  - component: {fileID: -3989100939476935831}
   m_Layer: 0
   m_Name: Shanghorse
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 3135743327591802991, guid: 04602cebb06cbf840807f218ed941580, type: 3}
   - {fileID: 5294737376871513591, guid: d225c2beb3bd3fb419b1af887a3c9491, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &-3989100939476935831
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9076815585623146289}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

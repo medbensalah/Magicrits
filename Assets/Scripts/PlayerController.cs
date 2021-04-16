@@ -35,6 +35,14 @@ public class PlayerController : MonoBehaviour, ICritController
         {
             fightInitializer.skillSlots[i].transform.GetChild(2).gameObject.SetActive(false);
         }
+        lastPage = (currentPage == pages) ? fightInitializer.nbSkills % 4 : 4;
+        if (currentPage == pages)
+        {
+            for (int i = lastPage; i < 4; ++i)
+            {
+                fightInitializer.skillSlots[i].SetActive(false);
+            }
+        }
     }
 
     // Update is called once per frame

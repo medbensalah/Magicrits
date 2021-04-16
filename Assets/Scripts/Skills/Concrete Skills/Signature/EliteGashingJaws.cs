@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,17 +14,28 @@ public class EliteGashingJaws : MonoBehaviour, ISkill
     public int acc;
     public SkillType type;
 
-    public EliteGashingJaws()
-    {
-        // Magic Attack Skill
-        skills.Add(new PASkill(val, acc));
-        skills.Add(new HealSkill(15, 60));
-        skills.Add(new PABuffSkill(11, 30));
-    }
 
     //skill execution
     public void execute(Crit caster, Crit target)
     {
+        if (!skills.Any())
+        {
+            PASkill m = new PASkill();
+            HealSkill m1 = new HealSkill();
+            PABuffSkill m2 = new PABuffSkill();
+            m.init(val, acc);
+            m1.init(15, acc);
+            m2.init(11, acc);
+            skills.Add(m);
+            skills.Add(m);
+            skills.Add(m);
+            skills.Add(m);
+            skills.Add(m);
+            skills.Add(m);
+            skills.Add(m);
+            skills.Add(m1);
+            skills.Add(m2);
+        }
         foreach (ISkill skill in skills)
         {
             //executing all base skills

@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MASkill : MonoBehaviour, ISkill
+public class MASkill :  ISkill
 {
     public int skillValue;          //base skill value
     public int accuracy;            //base skill accuracy
 
-    public MASkill(int val, int acc = 100) 
+    public void init(int val, int acc = 100)
     {
-        Debug.Log(val + " " + acc);
         skillValue = val;
         accuracy = acc;
     }

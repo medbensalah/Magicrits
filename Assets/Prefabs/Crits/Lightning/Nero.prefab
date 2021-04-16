@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6078652152493835551}
   - component: {fileID: 6078652152493835550}
   - component: {fileID: 6078652152493835549}
+  - component: {fileID: -1775122326094723498}
   m_Layer: 0
   m_Name: Nero
   m_TagString: Untagged
@@ -145,3 +146,22 @@ MonoBehaviour:
   - {fileID: 2471578025960083356, guid: 01575fc5dfcf5d14ebe7bf22f57760e4, type: 3}
   - {fileID: 3737360837587937029, guid: 8994176a9c267674cb6be906ba4c7754, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &-1775122326094723498
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078652152493835548}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

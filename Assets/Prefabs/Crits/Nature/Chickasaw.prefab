@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4751558646546820502}
   - component: {fileID: 4751558646546820503}
   - component: {fileID: 4751558646546820500}
+  - component: {fileID: 6211498936810710597}
   m_Layer: 0
   m_Name: Chickasaw
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 5641759176166392235, guid: 13153e8a3afc4a64c96cea9f3fa6a07d, type: 3}
   - {fileID: 7624700199017482788, guid: 615c9a5dded200d4a9cdc5cc0868f5fa, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &6211498936810710597
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4751558646546820501}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

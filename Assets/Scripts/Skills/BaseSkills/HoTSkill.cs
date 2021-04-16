@@ -7,13 +7,13 @@ public class HoTSkill : MonoBehaviour, ISkill
     public int skillValue;          //base skill value
     public int accuracy;            //base skill accuracy
     public int turns;               //base skill number of turns
-    public HoTSkill(int val, int acc = 100, int t = 3)
+   
+    public void init(int val, int acc = 100, int t = 3)
     {
         skillValue = val;
         accuracy = acc;
-        turns = t;
+        turns = 3;
     }
-
     public void execute(Crit caster, Crit target)
     {
         //calculating the final value of the skill accuracy

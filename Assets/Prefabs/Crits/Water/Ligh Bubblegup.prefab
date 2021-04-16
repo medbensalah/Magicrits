@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8653597115386859653}
   - component: {fileID: 8653597115386859652}
   - component: {fileID: 8653597115386859655}
+  - component: {fileID: 1597411373636040013}
   m_Layer: 0
   m_Name: Ligh Bubblegup
   m_TagString: Untagged
@@ -145,3 +146,22 @@ MonoBehaviour:
   - {fileID: 1203666893032766598, guid: 65278e1b47a898c438efa754a273675e, type: 3}
   - {fileID: 4735795509794352524, guid: 23f9489ba5c3e06489d4eb473aab1b04, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &1597411373636040013
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653597115386859654}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

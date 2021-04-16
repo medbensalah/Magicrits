@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,15 +14,18 @@ public class DefenseBuff_STD : MonoBehaviour, ISkill
     public int acc;
     public SkillType type;
 
-    public DefenseBuff_STD()
-    {
-        skills.Add(new PDBuffSkill(val, acc));
-        skills.Add(new MDBuffSkill(val, acc));
-    }
-
     //skill execution
     public void execute(Crit caster, Crit target)
     {
+        if (!skills.Any())
+        {
+            PDBuffSkill m = new PDBuffSkill();
+            MDBuffSkill m1 = new MDBuffSkill();
+            m.init(val, acc);
+            m1.init(val, acc);
+            skills.Add(m);
+            skills.Add(m1);
+        }
         foreach (ISkill skill in skills)
         {
             //executing all base skills

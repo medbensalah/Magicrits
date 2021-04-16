@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 862336670292703568}
   - component: {fileID: 862336670292703569}
   - component: {fileID: 862336670292703574}
+  - component: {fileID: -6366525644167100327}
   m_Layer: 0
   m_Name: Pollifog
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 5321998801648583116, guid: 6bdaf0689ca801645aca20c1e72b1966, type: 3}
   - {fileID: 8504842363625407190, guid: 203221eba743b1e46b9e202f27f2622f, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &-6366525644167100327
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862336670292703575}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

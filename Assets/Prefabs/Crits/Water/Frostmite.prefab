@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4483886506213078675}
   - component: {fileID: 4483886506213078676}
   - component: {fileID: 4483886506213078677}
+  - component: {fileID: 4307698874207271592}
   m_Layer: 0
   m_Name: Frostmite
   m_TagString: Untagged
@@ -145,3 +146,22 @@ MonoBehaviour:
   - {fileID: 3266792152568653303, guid: fd1c31a39feab394caa9b4de86e4e1df, type: 3}
   - {fileID: 1611084651269400151, guid: 78aa7ff5230c6644b9f3cb546cae465c, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &4307698874207271592
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483886506213078678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

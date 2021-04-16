@@ -173,6 +173,7 @@ public class Crit : MonoBehaviour
     [SerializeField] public List<MonoBehaviour> skills;
 
 
+
     public void TakeDamage(int value, Type? type = null)
     {
         //Managing elemental weaknesses
@@ -259,7 +260,7 @@ public class Crit : MonoBehaviour
         }
 
 
-
+        Debug.Log(value + "  " + weak + "  " + strong);
         Health = (Health - value >= 0) ? Health - value : 0;
         if (Asleep != 0)
         {

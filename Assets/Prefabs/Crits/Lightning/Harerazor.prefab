@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2821976724044673176}
   - component: {fileID: 2821976724044673177}
   - component: {fileID: 2821976724044673178}
+  - component: {fileID: 2186278450393199488}
   m_Layer: 0
   m_Name: Harerazor
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 5331098593497485711, guid: 7f32e7da3c81ed44d8963f676073d4a8, type: 3}
   - {fileID: 7579751161210260764, guid: 527ed3aea89af5d4597b7a4dd1e77cf6, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &2186278450393199488
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2821976724044673179}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -79,13 +79,18 @@ public class FightInit : MonoBehaviour
     {
         //Enemy init
         int enemy = ChooseEnemy();
+
+        enemyCrit = Instantiate(enemies[enemy], GameObject.Find("Canvas").transform);
+        enemyCrit.transform.position = new Vector3(25, 35, 0);
+        enemyCrit.transform.localScale = new Vector3(10, 10, 1);
+        enemyAnimator = enemyCrit.GetComponent<Animator>();
+
         Crit enemyCritScript = enemyCrit.GetComponent<Crit>();
-        enemyCritScript = enemies[enemy].GetComponent<Crit>();
         enemyCrit.GetComponent<SpriteRenderer>().sprite = enemyCritScript.ActiveSprite;
 
         var enemyFrame = enemyInfo.transform.GetChild(0).GetComponent<Image>().sprite = enemyCritScript.ActiveFrame;
 
-        enemyInfo.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(enemyCritScript.name);
+        enemyInfo.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(enemies[enemy].GetComponent<Crit>().name);
         enemyInfo.transform.GetChild(3).GetComponent<TextMeshProUGUI>().SetText(string.Format(
             enemyCritScript.GetComponent<Crit>().Health.ToString() + "/" + enemyCritScript.GetComponent<Crit>().MaxHealth.ToString()
         ));
@@ -195,15 +200,17 @@ public class FightInit : MonoBehaviour
     }
     public void PlayerInit()
     {
-        Instantiate(PlayerTeam.team[0], GameObject.Find("Canvas").transform,);
+        playerCrit = Instantiate(PlayerTeam.team[0].gameObject, GameObject.Find("Canvas").transform);
+        playerCrit.transform.position = new Vector3(-25.1f, 35, 0);
+        playerCrit.transform.localScale = new Vector3(-10, 10, 1);
+        playerAnimator = playerCrit.GetComponent<Animator>();
         //Player init
         Crit playerCritScript = playerCrit.GetComponent<Crit>();
-        playerCritScript = PlayerTeam.team[0].GetComponent<Crit>(); //******managing starter
         playerCrit.GetComponent<SpriteRenderer>().sprite = playerCritScript.ActiveSprite;
 
         var playerFrame = playerInfo.transform.GetChild(0).GetComponent<Image>().sprite = playerCritScript.ActiveFrame;
 
-        playerInfo.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(playerCritScript.name);
+        playerInfo.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(PlayerTeam.team[0].name);
         playerInfo.transform.GetChild(3).GetComponent<TextMeshProUGUI>().SetText(string.Format(
             playerCritScript.GetComponent<Crit>().Health.ToString() + "/" + playerCritScript.GetComponent<Crit>().MaxHealth.ToString()
         ));

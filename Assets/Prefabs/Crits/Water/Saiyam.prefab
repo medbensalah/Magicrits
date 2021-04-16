@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6128611833390059777}
   - component: {fileID: 6128611833390059806}
   - component: {fileID: 6128611833390059807}
+  - component: {fileID: 5948245795061900615}
   m_Layer: 0
   m_Name: Saiyam
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 67388415746499304, guid: 5e1ded65f487bb94ea846cb1c50f4e69, type: 3}
   - {fileID: 371492939464286151, guid: 1c34b8526c5a5eb42b4580ed7cde0b7f, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &5948245795061900615
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128611833390059804}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

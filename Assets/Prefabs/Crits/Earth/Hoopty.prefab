@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3903418808302296727}
   - component: {fileID: 3903418808302296729}
   - component: {fileID: 3903418808302296728}
+  - component: {fileID: 7874457257508212603}
   m_Layer: 0
   m_Name: Hoopty
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 4828997581716281053, guid: 8502a643fdae79f43b3773cf98d43a76, type: 3}
   - {fileID: 5847718328108567999, guid: 9500115cca4ffb64dabdab05694dc960, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &7874457257508212603
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3903418808302296726}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

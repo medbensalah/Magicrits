@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2423730058571463207}
   - component: {fileID: 6127909903826614929}
   - component: {fileID: 2213002346526474139}
+  - component: {fileID: 7505324093575418325}
   m_Layer: 0
   m_Name: Scarecrow Charix
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 318466649503034776, guid: 4a30f566f66826c40bcf34948d13a5bf, type: 3}
   - {fileID: 9009024880034970026, guid: 0d410613d9db9234f8269c70710795f7, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &7505324093575418325
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3737513126127848890}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

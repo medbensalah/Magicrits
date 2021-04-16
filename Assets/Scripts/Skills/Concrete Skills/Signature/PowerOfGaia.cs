@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,17 +14,18 @@ public class PowerOfGaia : MonoBehaviour, ISkill
     public int acc;
     public SkillType type;
 
-    public PowerOfGaia()
-    {
-        // Magic Attack Skill
-        skills.Add(new PASkill(val, acc));
-        skills.Add(new PASkill(val, acc));
-        skills.Add(new PASkill(val, acc));
-    }
 
     //skill execution
     public void execute(Crit caster, Crit target)
     {
+        if (!skills.Any())
+        {
+            PASkill m = new PASkill();
+            m.init(val, acc);
+            skills.Add(m);
+            skills.Add(m);
+            skills.Add(m);
+        }
         foreach (ISkill skill in skills)
         {
             //executing all base skills

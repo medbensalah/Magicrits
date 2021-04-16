@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6826221220285561266}
   - component: {fileID: 6826221220285561267}
   - component: {fileID: 6826221220285561268}
+  - component: {fileID: 5863363917699466066}
   m_Layer: 0
   m_Name: Cubsprout
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 466303882731296676, guid: 9f48db8ded1e06b48bdaf1c5c446e901, type: 3}
   - {fileID: 7479988410769404379, guid: 526087fa84e94ad44b69cc515514cff4, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &5863363917699466066
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826221220285561269}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

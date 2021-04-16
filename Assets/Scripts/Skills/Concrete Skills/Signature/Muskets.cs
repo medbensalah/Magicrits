@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,16 +14,19 @@ public class Muskets : MonoBehaviour, ISkill
     public int acc;
     public SkillType type;
 
-    public Muskets()
-    {
-        // Magic Attack Skill
-        skills.Add(new MASkill(val, acc));
-        skills.Add(new AccuracyBuffSkill(10, 100));
-    }
 
     //skill execution
     public void execute(Crit caster, Crit target)
     {
+        if (!skills.Any())
+        {
+            MASkill m = new MASkill();
+            AccuracyBuffSkill m1 = new AccuracyBuffSkill();
+            m.init(val, acc);
+            m1.init(10, acc);
+            skills.Add(m);
+            skills.Add(m1);
+        }
         foreach (ISkill skill in skills)
         {
             //executing all base skills

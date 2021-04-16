@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,16 +14,18 @@ public class ReapingFlame : MonoBehaviour, ISkill
     public int acc;
     public SkillType type;
 
-    public ReapingFlame()
-    {
-        // Magic Attack Skill
-        skills.Add(new MASkill(val, acc));
-        skills.Add(new WreakHavoc(30));
-    }
-
     //skill execution
     public void execute(Crit caster, Crit target)
     {
+        if (!skills.Any())
+        {
+            MASkill m = new MASkill();
+            WreakHavoc m1 = new WreakHavoc();
+            m.init(val, acc);
+            m1.init(30);
+            skills.Add(m);
+            skills.Add(m1);
+        }
         foreach (ISkill skill in skills)
         {
             //executing all base skills

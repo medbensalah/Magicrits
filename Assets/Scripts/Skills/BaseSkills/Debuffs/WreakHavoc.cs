@@ -7,7 +7,7 @@ public class WreakHavoc : MonoBehaviour, ISkill
     //skill's base accuracy
     public int accuracy;
 
-    public WreakHavoc(int acc = 100)
+    public void init(int acc = 100)
     {
         accuracy = acc;
     }

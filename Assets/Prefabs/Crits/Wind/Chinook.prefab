@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7787893084143771996}
   - component: {fileID: 7787893084143771999}
   - component: {fileID: 7787893084143771998}
+  - component: {fileID: 7483516751221915423}
   m_Layer: 0
   m_Name: Chinook
   m_TagString: Untagged
@@ -144,3 +145,22 @@ MonoBehaviour:
   - {fileID: 4449519855545608798, guid: ce44be09608dace4e9e0bba5b6372cf0, type: 3}
   - {fileID: 3476124689779109016, guid: ae99118f1ccecf94ab65b901716a8770, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &7483516751221915423
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7787893084143771969}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

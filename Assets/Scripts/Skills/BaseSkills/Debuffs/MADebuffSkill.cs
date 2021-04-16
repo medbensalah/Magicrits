@@ -9,12 +9,11 @@ public class MADebuffSkill : MonoBehaviour, ISkill
     //skill's base accuracy
     public int accuracy;
 
-    public MADebuffSkill(int val, int acc = 100)
+    public void init(int val, int acc = 100)
     {
         skillValue = val;
         accuracy = acc;
     }
-
     public void execute(Crit caster, Crit target)
     {
         int random = Random.Range(0, 10000);            //calculating skill success probability

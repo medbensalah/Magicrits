@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,15 +15,16 @@ public class Poison_STD : MonoBehaviour, ISkill
     public int acc;
     public SkillType type;
 
-    public Poison_STD()
-    {
-        // Putting enemy to sleep
-        skills.Add(new PoisonSkill(val, acc, turns));
-    }
 
     //skill execution
     public void execute(Crit caster, Crit target)
     {
+        if (!skills.Any())
+        {
+            PoisonSkill m = new PoisonSkill();
+            m.init(val, acc, turns);
+            skills.Add(m);
+        }
         foreach (ISkill skill in skills)
         {
             //executing all base skills

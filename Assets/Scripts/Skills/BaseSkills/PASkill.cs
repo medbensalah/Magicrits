@@ -7,7 +7,7 @@ public class PASkill : MonoBehaviour, ISkill
     public int skillValue;          //base skill value
     public int accuracy;            //base skill accuracy
 
-    public PASkill(int val, int acc = 100)
+    public void init(int val, int acc = 100)
     {
         skillValue = val;
         accuracy = acc;

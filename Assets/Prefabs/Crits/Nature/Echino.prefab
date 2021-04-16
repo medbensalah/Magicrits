@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6815028235347591886}
   - component: {fileID: 6815028235347591887}
   - component: {fileID: 6815028235347591880}
+  - component: {fileID: -8191248438380523729}
   m_Layer: 0
   m_Name: Echino
   m_TagString: Untagged
@@ -145,3 +146,22 @@ MonoBehaviour:
   - {fileID: 3236683363821383642, guid: 68c64ce04aadddf4d942927a2bb80348, type: 3}
   - {fileID: 7498036485984029758, guid: c0a9f875273fe4c49bf17a0059cdfb7b, type: 3}
   - {fileID: 8647007543287537791, guid: 85468d2cd32d8234889cef77a8926c75, type: 3}
+--- !u!95 &-8191248438380523729
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6815028235347591881}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfa20f7a007e6842b61098f34646878, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

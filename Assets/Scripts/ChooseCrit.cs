@@ -63,8 +63,8 @@ public class ChooseCrit : MonoBehaviour
             }
         }
 
-        transform.position = Vector3.Lerp(transform.position, crits[selected].position, Time.deltaTime * 5);
-        GetComponent<Light2D>().color = Color.Lerp(currentColor, colors[selected], Time.deltaTime * 5);
+        transform.position = Vector3.Lerp(transform.position, crits[selected].position, 0.08f);
+        GetComponent<Light2D>().color = Color.Lerp(currentColor, colors[selected], 0.08f);
 
     }
 
