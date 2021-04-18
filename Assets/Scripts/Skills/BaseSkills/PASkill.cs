@@ -21,8 +21,11 @@ public class PASkill : MonoBehaviour, ISkill
         {
             //calculating damage
             //damage is at least 1
-            int randomizer = Random.Range(-3, 3);
-            int damage = (caster.PhysicalAttack + skillValue < target.PhysicalDefense + randomizer) ?
+            
+            int damage = (caster.PhysicalAttack + skillValue <= target.PhysicalDefense) ?
+                1 : caster.PhysicalAttack + skillValue - target.PhysicalDefense;
+            int randomizer = Random.Range(-damage / 10, damage / 10);
+            damage = (caster.PhysicalAttack + skillValue < target.PhysicalDefense + randomizer) ?
                 1 : caster.PhysicalAttack + skillValue - target.PhysicalDefense + randomizer;
             //TODO animation
             target.TakeDamage(damage);

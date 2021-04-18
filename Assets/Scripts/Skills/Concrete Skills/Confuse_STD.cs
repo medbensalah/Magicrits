@@ -30,5 +30,6 @@ public class Confuse_STD : MonoBehaviour, ISkill
             //executing all base skills
             skill.execute(caster, target);
         }
+
     }
 }

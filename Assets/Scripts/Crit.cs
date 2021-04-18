@@ -141,12 +141,12 @@ public class Crit : MonoBehaviour
     //turns till recovery
     public int Asleep;
 
-    [SerializeField] private UpRate HealthUpRate;
-    [SerializeField] private UpRate PAUpRate;
-    [SerializeField] private UpRate MAUpRate;
-    [SerializeField] private UpRate PDUpRate;
-    [SerializeField] private UpRate MDUpRate;
-    [SerializeField] private UpRate SpeedUpRate;
+    [SerializeField] public UpRate HealthUpRate;
+    [SerializeField] public UpRate PAUpRate;
+    [SerializeField] public UpRate MAUpRate;
+    [SerializeField] public UpRate PDUpRate;
+    [SerializeField] public UpRate MDUpRate;
+    [SerializeField] public UpRate SpeedUpRate;
 
     //crit controller specifier (player-controlled or AI-controlled)
     public ICritController controller;
@@ -171,7 +171,6 @@ public class Crit : MonoBehaviour
 
     //Skills
     [SerializeField] public List<MonoBehaviour> skills;
-
 
 
     public void TakeDamage(int value, Type? type = null)
@@ -259,8 +258,6 @@ public class Crit : MonoBehaviour
             }
         }
 
-
-        Debug.Log(value + "  " + weak + "  " + strong);
         Health = (Health - value >= 0) ? Health - value : 0;
         if (Asleep != 0)
         {
@@ -270,73 +267,77 @@ public class Crit : MonoBehaviour
         {
             Alive = false;
         }
-        //TODO animate 
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "-" + value));
     }
     public void Heal(int value)
     {
         value = Health + value > MaxHealth ? MaxHealth - Health : value;
         Health = Health + value;
-        //TODO animate 
+
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "+" + value + "Health"));
     }
 
     public void DecreasePA(int value)
     {
         PAMods.Enqueue(new StatsMod(-value, Mod.PA));
-        //TODO aanimate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Physical attack -" + value));
     }
     public void DecreasePD(int value)
     {
         PDMods.Enqueue(new StatsMod(-value, Mod.PD));
-        //TODO aanimate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Physical defense -" + value));
     }
     public void DecreaseMA(int value)
     {
         MAMods.Enqueue(new StatsMod(-value, Mod.MA));
-        //TODO aanimate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Elemental attack -" + value));
     }
     public void DecreaseMD(int value)
     {
         MDMods.Enqueue(new StatsMod(-value, Mod.MD));
-        //TODO aanimate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Elemental defense -" + value));
     }
     public void DecreaseSpeed(int value)
     {
         SpeedMods.Enqueue(new StatsMod(-value, Mod.Speed));
-        //TODO animate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Speed -" + value));
     }
     public void DecreaseAccuracy(int value)
     {
         AccuracyMods.Enqueue(new StatsMod(-value, Mod.Accuracy));
-        //TODO animate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Accuracy -" + value + "%"));
     }
 
     public void InflictConfuse(int turns)
     {
         Confused += turns;
-        //TODO animate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Confuse"));
     }
     public void InflictSleep(int turns)
     {
         Asleep += turns;
-        //TODO animate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Sleep"));
     }
 
     public void InflictPoison(int value, int turns = 3)
     {
         poisonQueue.Enqueue(new Poison(value, turns));
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Poison"));
     }
     public void InflictDoT(int value, Type element,int turns = 3)
     {
         DOTQueue.Enqueue(new DoT(value, element, turns));
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Damage over time"));
     }
     public void InflictHoT(int value, int turns = 3)
     {
         HOTQueue.Enqueue(new HoT(value, turns));
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Heal over time"));
     }
 
     public void ProcessPoison()
     {
-        foreach(Poison p in poisonQueue)
+        foreach(Poison p in poisonQueue.ToArray())
         {
             TakeDamage(p.Value + Random.Range(-2, 2));
             p.Turns--;
@@ -348,7 +349,7 @@ public class Crit : MonoBehaviour
     }
     public void ProcessDoT()
     {
-        foreach(DoT dot in DOTQueue)
+        foreach(DoT dot in DOTQueue.ToArray())
         {
             TakeDamage(dot.Value + Random.Range(-3, 3), dot.Element);
             dot.Turns--;
@@ -360,7 +361,7 @@ public class Crit : MonoBehaviour
     }
     public void ProcessHoT()
     {
-        foreach (HoT hot in HOTQueue)
+        foreach (HoT hot in HOTQueue.ToArray())
         {
             Heal(hot.Value);
             hot.Turns--;
@@ -373,7 +374,7 @@ public class Crit : MonoBehaviour
 
     public void advanceTurn()
     {
-        foreach(StatsMod mod in PAMods)
+        foreach(StatsMod mod in PAMods.ToArray())
         {
             mod.Turns--;
             if(mod.Turns <= 0)
@@ -381,7 +382,7 @@ public class Crit : MonoBehaviour
                 PAMods.Dequeue();
             }
         }
-        foreach(StatsMod mod in MAMods)
+        foreach(StatsMod mod in MAMods.ToArray())
         {
             mod.Turns--;
             if(mod.Turns <= 0)
@@ -389,7 +390,7 @@ public class Crit : MonoBehaviour
                 MAMods.Dequeue();
             }
         }
-        foreach(StatsMod mod in PDMods)
+        foreach(StatsMod mod in PDMods.ToArray())
         {
             mod.Turns--;
             if(mod.Turns <= 0)
@@ -397,7 +398,7 @@ public class Crit : MonoBehaviour
                 PDMods.Dequeue();
             }
         }
-        foreach(StatsMod mod in MDMods)
+        foreach(StatsMod mod in MDMods.ToArray())
         {
             mod.Turns--;
             if(mod.Turns <= 0)
@@ -405,7 +406,7 @@ public class Crit : MonoBehaviour
                 MDMods.Dequeue();
             }
         }
-        foreach(StatsMod mod in AccuracyMods)
+        foreach(StatsMod mod in AccuracyMods.ToArray())
         {
             mod.Turns--;
             if(mod.Turns <= 0)
@@ -413,7 +414,7 @@ public class Crit : MonoBehaviour
                 AccuracyMods.Dequeue();
             }
         }
-        foreach(StatsMod mod in SpeedMods)
+        foreach(StatsMod mod in SpeedMods.ToArray())
         {
             mod.Turns--;
             if(mod.Turns <= 0)
@@ -430,32 +431,32 @@ public class Crit : MonoBehaviour
     public void IncreasePA(int value)
     {
         PAMods.Enqueue(new StatsMod(value, Mod.PA));
-        //TODO aanimate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Physical attack +" + value));
     }
     public void IncreasePD(int value)
     {
         PDMods.Enqueue(new StatsMod(value, Mod.PD));
-        //TODO aanimate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Physical defense +" + value));
     }
     public void IncreaseMA(int value)
     {
         MAMods.Enqueue(new StatsMod(value, Mod.MA));
-        //TODO aanimate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Elemental attack +" + value));
     }
     public void IncreaseMD(int value)
     {
         MDMods.Enqueue(new StatsMod(value, Mod.MD));
-        //TODO aanimate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Elemental defense +" + value));
     }
     public void IncreaseSpeed(int value)
     {
         SpeedMods.Enqueue(new StatsMod(value, Mod.Speed));
-        //TODO animate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Speed +" + value));
     }
     public void IncreaseAccuracy(int value)
     {
         AccuracyMods.Enqueue(new StatsMod(value, Mod.Accuracy));
-        //TODO animate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Accuracy +" + value + "%"));
     }
 
 
@@ -464,7 +465,7 @@ public class Crit : MonoBehaviour
     //executed when a skill misses
     public void miss()
     {
-        //TODO animate
+        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "miss"));
     }
 
     public void GainXP(int value)

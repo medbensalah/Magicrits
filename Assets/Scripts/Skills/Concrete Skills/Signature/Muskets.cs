@@ -30,7 +30,16 @@ public class Muskets : MonoBehaviour, ISkill
         foreach (ISkill skill in skills)
         {
             //executing all base skills
-            skill.execute(caster, target);
+            string type = skill.GetType().ToString().ToLower();
+            if (type.Contains("buff") || type.Contains("heal") || type.Contains("hot"))
+            {
+                skill.execute(caster, caster);
+
+            }
+            else
+            {
+                skill.execute(caster, target);
+            }
         }
     }
 }

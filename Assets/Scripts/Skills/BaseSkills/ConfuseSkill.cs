@@ -21,6 +21,8 @@ public class ConfuseSkill : MonoBehaviour, ISkill
             //confuse the target
             //TODO animation
             target.InflictConfuse(skillValue);
+
+
             return;
         }
         target.miss();

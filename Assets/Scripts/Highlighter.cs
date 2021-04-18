@@ -42,7 +42,7 @@ public class Highlighter : MonoBehaviour
     //action on mouse up
     private void OnMouseUpAsButton()
     {
-        Debug.Log("click");
+
         if (!searched)
         {
             if (transform.parent.gameObject.tag.Equals("Decoration"))
@@ -84,7 +84,7 @@ public class Highlighter : MonoBehaviour
             )
         {
             case "Encounter":
-                Debug.Log("click");
+
                 //setting the bgindex based on the fight caller scene
                 if (scene.Contains("forest") || scene.Contains("plain"))
                 {

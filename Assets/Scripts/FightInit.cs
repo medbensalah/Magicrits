@@ -227,7 +227,8 @@ public class FightInit : MonoBehaviour
             skillInfo[i] = new SkillInfo(crit.skills[i]);
         }
 
-        int lvl = crit.Level;
+
+        int lvl = 35;
         nbSkills = lvl <= 1 ? 2 :
                        lvl <= 4 ? 3 :
                        lvl <= 7 ? 4 :
@@ -240,7 +241,7 @@ public class FightInit : MonoBehaviour
                        lvl <= 28 ? 11 :
                        lvl <= 30 ? 12 : 13;
         pages = (int)System.Math.Ceiling(((double)nbSkills) / 4);
-        Debug.Log(pages);
+
         for(int i = 0; i < System.Math.Max(System.Math.Min(4, nbSkills), nbSkills % 4); ++i)
         {
             skillSlots[i].GetComponent<Image>().sprite = available;

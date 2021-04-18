@@ -22,6 +22,15 @@ public class PlayerController : MonoBehaviour, ICritController
 
     private int currentPage;
     private int pages;
+
+    public Crit player;
+    
+    public void SetCrit(Crit crit)
+    {
+        player = crit;
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +59,7 @@ public class PlayerController : MonoBehaviour, ICritController
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         lastPage = 4;
-        
+
         if (pages > 1 && Input.GetMouseButtonDown(0))
         {
             if (hit)
@@ -81,7 +90,6 @@ public class PlayerController : MonoBehaviour, ICritController
                 for (int i = 0; i < lastPage; ++i)
                 {
                     fightInitializer.skillSlots[i].SetActive(true);
-                    fightInitializer.skillSlots[i].GetComponent<Image>().sprite = fightInitializer.available;
                     fightInitializer.skillSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = fightInitializer.skillInfo[fightInitializer.nbSkills - (i + 4 * (currentPage - 1)) - 1].name;
                     fightInitializer.skillSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = fightInitializer.elements[fightInitializer.skillInfo[fightInitializer.nbSkills - (i + 4 * (currentPage - 1)) - 1].type];
                     fightInitializer.skillSlots[i].transform.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = fightInitializer.skillInfo[fightInitializer.nbSkills - (i + 4 * (currentPage - 1)) - 1].accuracy + "%";
@@ -101,6 +109,11 @@ public class PlayerController : MonoBehaviour, ICritController
 
     public string GetSkill()
     {
+        if(player.Confused != 0)
+        {
+            int rnd = UnityEngine.Random.Range(0, fightInitializer.nbSkills - 1);
+            return player.skills[rnd].GetType().GetField("name").GetValue(player.skills[rnd]).ToString();
+        }
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if (hit && Input.GetMouseButtonDown(0))
         {

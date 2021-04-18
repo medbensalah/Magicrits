@@ -160,7 +160,7 @@ SpriteShapeRenderer:
   m_SortingOrder: 0
   m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 0}
+  m_ShapeTexture: {fileID: 2800000, guid: 110185e4f9a67b244895fdfe63e524d3, type: 3}
   m_Sprites: []
   m_LocalAABB:
     m_Center: {x: -0.022263736, y: -0.05112897, z: 0}
@@ -333,7 +333,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 1
-  m_SpriteShape: {fileID: 0}
+  m_SpriteShape: {fileID: 11400000, guid: b4d99d1356652fd4e9ceed2c65a6cfab, type: 2}
   m_FillPixelPerUnit: 100
   m_StretchTiling: 1
   m_SplineDetail: 16

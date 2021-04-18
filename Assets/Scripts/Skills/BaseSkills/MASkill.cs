@@ -17,14 +17,16 @@ public class MASkill :  ISkill
     {
         //calculating the final value of the skill accuracy
         int random = Random.Range(0, 10000);
-        Debug.Log("executed " + accuracy +" " + caster.Accuracy);
         if (random <= accuracy * caster.Accuracy)    //if the skill hits the target
         {
             //calculating damage
             //damage is at least 1
-            int randomizer = Random.Range(-3, 3);
-            int damage = (caster.MagicAttack + skillValue < target.MagicDefense + randomizer) ?
+            int damage = (caster.MagicAttack + skillValue < target.MagicDefense) ?
+                1 : caster.MagicAttack + skillValue - target.MagicDefense;
+            int randomizer = Random.Range(-damage / 10, damage / 10);
+            damage = (caster.MagicAttack + skillValue < target.MagicDefense + randomizer) ?
                 1 : caster.MagicAttack + skillValue - target.MagicDefense + randomizer;
+
             //TODO animation
             target.TakeDamage(damage, caster.CritType);
             return;
