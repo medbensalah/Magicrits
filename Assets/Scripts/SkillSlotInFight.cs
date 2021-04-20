@@ -18,7 +18,7 @@ public class SkillSlotInFight : MonoBehaviour
     }
     private void Update()
     {
-        if (FightManager.locked == true)
+        if (FightManager.locked == true || AnimationManager.animatorLock)
         {
             GetComponent<Image>().sprite = fightInitializer.locked;
             transform.GetChild(2).gameObject.SetActive(false);

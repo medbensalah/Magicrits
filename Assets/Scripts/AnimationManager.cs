@@ -9,7 +9,7 @@ public class AnimationManager : MonoBehaviour
     public GameObject effectOnPlayer;
     public GameObject parent;
     public float width;
-    private static bool animatorLock = false;
+    public static bool animatorLock = false;
     //public Animator effectOnEnemyAnimator;
     //public Animator effectOnPlayerAnimator;
 

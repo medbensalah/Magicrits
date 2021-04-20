@@ -310,12 +310,12 @@ public class Crit : MonoBehaviour
 
     public void InflictConfuse(int turns)
     {
-        Confused += turns;
+        Confused += (turns + 1);
         AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Confuse"));
     }
     public void InflictSleep(int turns)
     {
-        Asleep += turns;
+        Asleep += (turns + 1);
         AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Sleep"));
     }
 
@@ -423,8 +423,8 @@ public class Crit : MonoBehaviour
             }
         }
 
-        Confused--;
-        Asleep--;
+        Confused = Confused - 1 < 0 ? 0 : Confused - 1;
+        Asleep = Asleep - 1 < 0 ? 0 : Asleep - 1;
 
         ProcessPoison();
         ProcessDoT();

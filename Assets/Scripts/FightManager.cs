@@ -88,7 +88,7 @@ public class FightManager : MonoBehaviour
             playerTurn = DecideStarter();
         }
         StartCoroutine(Unlock());
-        if (!inChange && !locked)
+        if ((!inChange || !locked ) && !AnimationManager.animatorLock)
         {
             if (player.GetComponent<Crit>().Asleep != 0)
             {
@@ -129,15 +129,15 @@ public class FightManager : MonoBehaviour
                         {
                             skill.GetType().GetMethod("execute").Invoke(skill, CTParams);
                         }
-                        enemy.GetComponent<Crit>().advanceTurn();
-                        player.GetComponent<Crit>().advanceTurn();
                         inChange = true;
                         StartCoroutine(ChangeTurn());
+                        enemy.GetComponent<Crit>().advanceTurn();
+                        player.GetComponent<Crit>().advanceTurn();
                     }
                 }
             }
 
-            else if (!inChange || player.GetComponent<Crit>().Asleep > 0)
+            else if (!inChange)
             {
                 if (enemy.GetComponent<Crit>().Asleep == 0)
                 {
