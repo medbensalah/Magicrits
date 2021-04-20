@@ -94,7 +94,7 @@ public class FightManager : MonoBehaviour
             {
                 playerTurn = false;
             }
-            if (playerTurn == true)
+            if (playerTurn == true || enemy.GetComponent<Crit>().Asleep > 0)
             {
                 caster = player.GetComponent<Crit>();
                 //confuse here
@@ -137,7 +137,7 @@ public class FightManager : MonoBehaviour
                 }
             }
 
-            else if (!inChange)
+            else if (!inChange || player.GetComponent<Crit>().Asleep > 0)
             {
                 if (enemy.GetComponent<Crit>().Asleep == 0)
                 {
