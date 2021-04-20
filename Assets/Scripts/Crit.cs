@@ -423,6 +423,9 @@ public class Crit : MonoBehaviour
             }
         }
 
+        Confused--;
+        Asleep--;
+
         ProcessPoison();
         ProcessDoT();
         ProcessHoT();
