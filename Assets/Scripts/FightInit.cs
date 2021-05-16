@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -51,8 +52,9 @@ public class FightInit : MonoBehaviour
     {
         //animation to enter the fight scene
         animator.Play("Transition1_end");
-        enemyAnimator.Play("Deploy");
+            enemyAnimator.Play("Deploy");
         playerAnimator.Play("Deploy 1");
+
     }
 
     private void Awake()
@@ -60,7 +62,6 @@ public class FightInit : MonoBehaviour
         BackGroundInit();
         EnemyInit();
         PlayerInit();
-        fm.ChangeCrit(playerCrit);
     }
 
     public void BackGroundInit()
@@ -72,6 +73,10 @@ public class FightInit : MonoBehaviour
         {
             bg = Random.Range(0, 3);
         }
+        else if (Highlighter.BGIndex.Equals("final"))
+        {
+            bg = 11;
+        }
         //setting the fight background
         sr.sprite = backgroundSprites[bg];
     }
@@ -82,19 +87,23 @@ public class FightInit : MonoBehaviour
 
         enemyCrit = Instantiate(enemies[enemy], GameObject.Find("Canvas").transform);
         enemyCrit.transform.position = new Vector3(25, 35, 0);
+
         enemyCrit.transform.localScale = new Vector3(10, 10, 1);
         enemyAnimator = enemyCrit.GetComponent<Animator>();
 
         Crit enemyCritScript = enemyCrit.GetComponent<Crit>();
         enemyCrit.GetComponent<SpriteRenderer>().sprite = enemyCritScript.ActiveSprite;
+        
 
         var enemyFrame = enemyInfo.transform.GetChild(0).GetComponent<Image>().sprite = enemyCritScript.ActiveFrame;
 
-        enemyInfo.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(enemies[enemy].GetComponent<Crit>().name);
+        enemyInfo.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(enemies[enemy].GetComponent<Crit>().critName);
         enemyInfo.transform.GetChild(3).GetComponent<TextMeshProUGUI>().SetText(string.Format(
             enemyCritScript.GetComponent<Crit>().Health.ToString() + "/" + enemyCritScript.GetComponent<Crit>().MaxHealth.ToString()
         ));
         enemyInfo.transform.GetChild(4).GetComponent<Image>().sprite = elements[(int)enemyCritScript.CritType];
+
+
     }
     public int ChooseEnemy() {
         int enemy = Random.Range(1, 100);
@@ -196,11 +205,18 @@ public class FightInit : MonoBehaviour
         {
             enemy = Random.Range(77, 101);
         }
-        return enemy;
+        if (Highlighter.critIndex.Equals("nox"))
+        {
+            enemy = 102;
+        }
+            return enemy;
     }
     public void PlayerInit()
     {
-        playerCrit = Instantiate(PlayerTeam.team[0].gameObject, GameObject.Find("Canvas").transform);
+        playerCrit = PlayerTeam.team[0].gameObject;
+        playerCrit.transform.SetParent(GameObject.Find("Canvas").transform);
+        //playerCrit = (PlayerTeam.team[0].gameObject , GameObject.Find("Canvas").transform);
+        playerCrit.GetComponent<SpriteRenderer>().enabled = true;
         playerCrit.transform.position = new Vector3(-25.1f, 35, 0);
         playerCrit.transform.localScale = new Vector3(-10, 10, 1);
         playerAnimator = playerCrit.GetComponent<Animator>();
@@ -210,15 +226,39 @@ public class FightInit : MonoBehaviour
 
         var playerFrame = playerInfo.transform.GetChild(0).GetComponent<Image>().sprite = playerCritScript.ActiveFrame;
 
-        playerInfo.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(PlayerTeam.team[0].name);
+        playerInfo.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(PlayerTeam.team[0].GetComponent<Crit>().critName);
+        playerInfo.transform.GetChild(3).GetComponent<TextMeshProUGUI>().SetText(string.Format(
+            playerCritScript.GetComponent<Crit>().Health.ToString() + "/" + playerCritScript.GetComponent<Crit>().MaxHealth.ToString()
+        ));
+        playerInfo.transform.GetChild(4).GetComponent<Image>().sprite = elements[(int)playerCritScript.CritType];
+
+
+        ParseSkills(playerCritScript);
+    }
+    public void PlayerInitNext()
+    {
+        playerCrit = PlayerTeam.team[1].gameObject;
+        playerCrit.transform.SetParent(GameObject.Find("Canvas").transform);
+        //playerCrit = (PlayerTeam.team[0].gameObject , GameObject.Find("Canvas").transform);
+        playerCrit.GetComponent<SpriteRenderer>().enabled = true;
+        playerCrit.transform.position = new Vector3(-25.1f, 35, 0);
+        playerCrit.transform.localScale = new Vector3(-10, 10, 1);
+        playerAnimator = playerCrit.GetComponent<Animator>();
+        //Player init
+        Crit playerCritScript = playerCrit.GetComponent<Crit>();
+        playerCrit.GetComponent<SpriteRenderer>().sprite = playerCritScript.ActiveSprite;
+
+        var playerFrame = playerInfo.transform.GetChild(0).GetComponent<Image>().sprite = playerCritScript.ActiveFrame;
+
+        playerInfo.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(playerCrit.GetComponent<Crit>().critName);
         playerInfo.transform.GetChild(3).GetComponent<TextMeshProUGUI>().SetText(string.Format(
             playerCritScript.GetComponent<Crit>().Health.ToString() + "/" + playerCritScript.GetComponent<Crit>().MaxHealth.ToString()
         ));
         playerInfo.transform.GetChild(4).GetComponent<Image>().sprite = elements[(int)playerCritScript.CritType];
 
         ParseSkills(playerCritScript);
+         playerAnimator.Play("Deploy 1");
     }
-
     public void ParseSkills(Crit crit)
     {
 
@@ -228,21 +268,21 @@ public class FightInit : MonoBehaviour
         }
 
 
-        int lvl = 35;
-        nbSkills = lvl <= 1 ? 2 :
-                       lvl <= 4 ? 3 :
-                       lvl <= 7 ? 4 :
-                       lvl <= 10 ? 5 :
-                       lvl <= 13 ? 6 :
-                       lvl <= 16 ? 7 :
-                       lvl <= 19 ? 8 :
-                       lvl <= 22 ? 9 :
-                       lvl <= 25 ? 10 :
-                       lvl <= 28 ? 11 :
-                       lvl <= 30 ? 12 : 13;
+        int lvl = crit.Level;
+        nbSkills = lvl <= 3 ? 2 :
+                       lvl <= 6 ? 3 :
+                       lvl <= 9 ? 4 :
+                       lvl <= 12 ? 5 :
+                       lvl <= 15 ? 6 :
+                       lvl <= 18 ? 7 :
+                       lvl <= 21 ? 8 :
+                       lvl <= 24 ? 9 :
+                       lvl <= 27 ? 10 :
+                       lvl <= 29 ? 11 :
+                       lvl <= 34 ? 12 : 13;
         pages = (int)System.Math.Ceiling(((double)nbSkills) / 4);
 
-        for(int i = 0; i < System.Math.Max(System.Math.Min(4, nbSkills), nbSkills % 4); ++i)
+        for(int i = 0; i < System.Math.Max(System.Math.Min(4, nbSkills), nbSkills % 5); ++i)
         {
             skillSlots[i].GetComponent<Image>().sprite = available;
             skillSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = skillInfo[nbSkills - (i + 4 * (currentPage - 1)) - 1].name;

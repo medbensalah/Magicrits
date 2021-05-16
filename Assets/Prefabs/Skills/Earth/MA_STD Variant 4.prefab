@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 330370145169747376, guid: e215a7acd1886f34998e8279d0766982,
         type: 3}
       propertyPath: m_Name
-      value: MA_STD
+      value: MA_STD Variant 4
       objectReference: {fileID: 0}
     - target: {fileID: 7280437255800467888, guid: e215a7acd1886f34998e8279d0766982,
         type: 3}
@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 8126662394256460700, guid: e215a7acd1886f34998e8279d0766982,
         type: 3}
       propertyPath: name
-      value: Small quake
+      value: Goeey center
       objectReference: {fileID: 0}
     - target: {fileID: 8126662394256460700, guid: e215a7acd1886f34998e8279d0766982,
         type: 3}

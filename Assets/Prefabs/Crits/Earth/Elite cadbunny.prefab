@@ -115,12 +115,12 @@ MonoBehaviour:
   critType: 0
   level: 1
   xp: 0
-  MaxHealth: 16
-  health: 16
-  physicalAttack: 6
-  magicAttack: 9
+  MaxHealth: 14
+  health: 14
+  physicalAttack: 4
+  magicAttack: 7
   physicalDefense: 5
-  magicDefense: 6
+  magicDefense: 7
   speed: 8
   accuracy: 100
   Confused: 0

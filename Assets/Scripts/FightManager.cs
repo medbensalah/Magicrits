@@ -29,6 +29,16 @@ public class FightManager : MonoBehaviour
     private bool inChange = false;
     public Gradient gradient;
     public static bool locked = false;
+    public static bool animLock = false;
+
+    int turn = 0;
+    bool advanced = false;
+
+    GameObject anim;
+
+    public Transform animation;
+
+    public GameObject[] animations;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,8 +53,6 @@ public class FightManager : MonoBehaviour
         CTParams[0] = caster;
         CTParams[1] = target;
 
-        locked = true;
-
         AnimationManager.setEnemy(enemy.GetComponent<Crit>());
     }
 
@@ -52,6 +60,7 @@ public class FightManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         locked = false;
+        animLock = false;
     }
 
     // Update is called once per frame
@@ -87,8 +96,7 @@ public class FightManager : MonoBehaviour
             enemy.GetComponent<Crit>().controller = aiController;
             playerTurn = DecideStarter();
         }
-        StartCoroutine(Unlock());
-        if ((!inChange || !locked ) && !AnimationManager.animatorLock)
+        if (!locked && !animLock && !AnimationManager.animatorLock && player.GetComponent<Crit>().Alive)
         {
             if (player.GetComponent<Crit>().Asleep != 0)
             {
@@ -119,27 +127,54 @@ public class FightManager : MonoBehaviour
                     if (name != "")
                     {
                         var skill = player.GetComponent<Crit>().skills.Where(x => x.GetType().GetField("name").GetValue(x).ToString().Equals(name)).First();
+                        
+                          
+
+                        
 
                         string type = skill.GetType().ToString().ToLower();
+                        
+                        if (type.Contains("debuff"))
+                        {
+                            DestroyImmediate(anim);
+                            anim = Instantiate(animations.First(x => x.name.StartsWith("Debuff")), animation);
+                        }
+                        else if (type.Contains("buff"))
+                        {
+                            DestroyImmediate(anim);
+                            anim = Instantiate(animations.First(x => x.name.StartsWith("Buff")), animation);
+                        }
+                        else if (type.Contains("heal") || type.Contains("hot"))
+                        {
+                            DestroyImmediate(anim);
+                            anim = Instantiate(animations.First(x => x.name.StartsWith("Heal")), animation);
+                        }
+
                         if ((!type.Contains("debuff") && type.Contains("buff")) || type.Contains("heal") || type.Contains("hot"))
                         {
                             skill.GetType().GetMethod("execute").Invoke(skill, CCParams);
+                            anim.transform.position = new Vector3(caster.transform.position.x, anim.transform.position.y, 0);
                         }
                         else
                         {
+                            if (!type.Contains("debuff")) {
+                                DestroyImmediate(anim);
+                                anim = Instantiate(animations.First(x => x.name.StartsWith(name)), animation);
+                            }
                             skill.GetType().GetMethod("execute").Invoke(skill, CTParams);
+                            anim.transform.position = new Vector3(target.transform.position.x, anim.transform.position.y, 0);
                         }
+                        animLock = true;    
                         inChange = true;
                         StartCoroutine(ChangeTurn());
-                        enemy.GetComponent<Crit>().advanceTurn();
-                        player.GetComponent<Crit>().advanceTurn();
                     }
                 }
+
             }
 
             else if (!inChange)
             {
-                if (enemy.GetComponent<Crit>().Asleep == 0)
+                if (enemy.GetComponent<Crit>().Asleep <= 0)
                 {
                     caster = enemy.GetComponent<Crit>();
                     //confuse here
@@ -157,47 +192,111 @@ public class FightManager : MonoBehaviour
                     CTParams[0] = caster;
                     CTParams[1] = target;
                     string name = enemy.GetComponent<Crit>().controller.GetSkill();
-                    if (name != "" && !locked)
+                    if (name != "")
                     {
                         var skill = enemy.GetComponent<Crit>().skills.Where(x => x.GetType().GetField("name").GetValue(x).ToString().Equals(name)).First();
+                        //if (name != "NoxUlt")
+                        //{
+                        //    DestroyImmediate(anim);
+                        //    anim = Instantiate(animations[2], GameObject.Find("Canvas").transform);
+                        //    anim.GetComponent<Animator>().Play("Elite Sugar Rush");
+                        //}
+                        //else
+                        //{
+                        //    anim = Instantiate(animations[1], GameObject.Find("Canvas").transform);
+                        //    //anim.GetComponent<Animator>().Play("Bash");
+                        //}
+                        //anim.transform.position = target.transform.position;
+                        //anim.transform.localScale = new Vector2(-Mathf.Abs(anim.transform.localScale.x),
+                        //    anim.transform.localScale.y);
+                        //animLock = true;
 
-                        string type = skill.GetType().ToString().ToLower();
+                        string type = skill.GetType().ToString().ToLower(); if (type.Contains("debuff"))
+                        {
+                            DestroyImmediate(anim);
+                            anim = Instantiate(animations.First(x => x.name.StartsWith("Debuff")), animation);
+                        }
+                        else if (type.Contains("buff"))
+                        {
+                            DestroyImmediate(anim);
+                            anim = Instantiate(animations.First(x => x.name.StartsWith("Buff")), animation);
+                        }
+                        else if (type.Contains("heal") || type.Contains("hot"))
+                        {
+                            DestroyImmediate(anim);
+                            anim = Instantiate(animations.First(x => x.name.StartsWith("Heal")), animation);
+                        }
+
                         if ((!type.Contains("debuff") && type.Contains("buff")) || type.Contains("heal") || type.Contains("hot"))
                         {
                             skill.GetType().GetMethod("execute").Invoke(skill, CCParams);
+                            anim.transform.position = new Vector3(caster.transform.position.x, anim.transform.position.y, 0);
                         }
                         else
                         {
+                            if (!type.Contains("debuff"))
+                            {
+                                DestroyImmediate(anim);
+                                anim = Instantiate(animations.First(x => x.name.StartsWith(name)), animation);
+                            }
                             skill.GetType().GetMethod("execute").Invoke(skill, CTParams);
+                            anim.transform.position = new Vector3(target.transform.position.x, anim.transform.position.y, 0);
                         }
+                        animLock = true;
+                        inChange = true;
                         StartCoroutine(ChangeTurn());
                     }
 
                 }
 
             }
-
-
-
         }
 
+        if (turn % 2 == 0 && !advanced)
+        {
+            advanced = true;
+
+            enemy.GetComponent<Crit>().advanceTurn();
+            player.GetComponent<Crit>().advanceTurn();
+        }
+        
     }
 
     IEnumerator ChangeTurn()
     {
+        advanced = false;
+        turn++;
         inChange = locked = true;
-        yield return new WaitForSeconds(0.1f);
         playerTurn = !playerTurn;
         inChange = false;
+        yield return new WaitUntil(() => (!locked) && (!animLock));
+        if (player.GetComponent<Crit>().Health == 0)
+        {
+            Debug.Log(locked + "  " + animLock);
+            new WaitWhile(() => locked || animLock);
+            Debug.Log(locked + "  " + animLock);
+            player.GetComponent<Crit>().Alive = false;
+            ChangeCrit();
+        }
     }
 
-    public void ChangeCrit(GameObject go)
+    public void ChangeCrit()
     {
-        //player = go;
-        //foreach (var n in player.GetComponent<Crit>().skills)
-        //{
-        //    Debug.Log(n.GetType().GetField("name").GetValue(n));
-        //}
+        Debug.Log("here");
+        fightinitializer.playerCrit.transform.SetParent(null);
+        fightinitializer.PlayerInitNext();
+        player = fightinitializer.playerCrit.gameObject;
+        Crit crit = PlayerTeam.team.FirstOrDefault(x => x.Alive == true);
+
+        playerController.SetCrit(player.GetComponent<Crit>());
+        player.GetComponent<Crit>().controller = playerController;
+        if (crit == null)
+        {
+            Debug.Log("Lose");
+        }
+        else
+        {
+        }
     }
 
     private bool DecideStarter()

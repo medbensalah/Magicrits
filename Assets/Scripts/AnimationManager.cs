@@ -47,7 +47,8 @@ public static void setEnemy(Crit e)
     {
         if(count > 0)
         {
-            if(!animatorLock)
+            FightManager.locked = true;
+            if (!animatorLock)
                 StartCoroutine(Display());
         }
     }
@@ -55,30 +56,31 @@ public static void setEnemy(Crit e)
     IEnumerator Display()
     {
         animatorLock = true;
-            KeyValuePair<Crit, string> message = queue.Peek();
-            GameObject go;
-            if (message.Key == enemy)
-            {
-                go = Instantiate(effectOnEnemy, parent.transform);
-            }
-            else
-            {
-                go = Instantiate(effectOnPlayer, parent.transform);
-            }
-            if (go.GetComponent<Animator>().GetCurrentAnimatorStateInfo(-1).tagHash == 0)
-            {
-                SetEffect(go.GetComponent<TextMeshProUGUI>() , message.Value);
+        KeyValuePair<Crit, string> message = queue.Peek();
+        GameObject go;
+        if (message.Key == enemy)
+        {
+            go = Instantiate(effectOnEnemy, parent.transform);
+        }
+        else
+        {
+            go = Instantiate(effectOnPlayer, parent.transform);
+        }
+        if (go.GetComponent<Animator>().GetCurrentAnimatorStateInfo(-1).tagHash == 0)
+        {
+            SetEffect(go.GetComponent<TextMeshProUGUI>() , message.Value);
                 
 
-                go.GetComponent<Animator>().Play("DisplayEffect", -1, 0f);
-                count--;
-                queue.Dequeue();
-                Destroy(go, 0.6f);
-                yield return new WaitForSeconds(0.3f);
+            go.GetComponent<Animator>().Play("DisplayEffect", -1, 0f);
+            count--;
+            queue.Dequeue();
+            Destroy(go, 0.6f);
+            yield return new WaitForSeconds(0.3f);
             animatorLock = false;
-            }
-            if( count == 0)
+        }
+        if( count == 0)
         {
+            yield return new WaitForSeconds(0.7f);
             FightManager.locked = false;
         }
         

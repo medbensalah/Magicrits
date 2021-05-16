@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //crit types
-public enum Type { Earth, Lightning, Wind, Fire, Water, Nature }
+public enum Type { Earth, Lightning, Wind, Fire, Water, Nature, All }
 
-//crit's stats rating
-//weak -----> stat +0 / +1 each level
+//crit's stats rating / doubled for health
+//weak -----> stat +0 / +2 each level
 //average --> stat +1 / +2 each level
 //strong ---> stat +2 / +3 each level
 //max ------> stat +2 / +3 / +4 each level with low chance for +2
@@ -28,7 +28,7 @@ public class Crit : MonoBehaviour
     public Sprite ActiveSprite;
     public Sprite ActiveFrame;
 
-    public bool Alive;
+    public bool Alive = true;
 
     //crit type
     [SerializeField] private Type critType;
@@ -172,6 +172,24 @@ public class Crit : MonoBehaviour
     //Skills
     [SerializeField] public List<MonoBehaviour> skills;
 
+    private void Start()
+    {
+
+    }
+
+    public Crit() { }
+
+    public Crit(Crit crit)
+    {
+        physicalAttack = crit.physicalAttack;
+        physicalDefense = crit.physicalDefense;
+        magicDefense = crit.magicDefense;
+        magicAttack = crit.magicAttack;
+        speed = crit.speed;
+        MaxHealth = crit.MaxHealth;
+        Health = MaxHealth;
+    }
+
 
     public void TakeDamage(int value, Type? type = null)
     {
@@ -265,17 +283,21 @@ public class Crit : MonoBehaviour
         }
         if (Health == 0)
         {
-            Alive = false;
+            Health = MaxHealth;
+          //  Alive = false;
         }
         AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "-" + value));
     }
     public void Heal(int value)
     {
-        value = Health + value > MaxHealth ? MaxHealth - Health : value;
-        Health = Health + value;
+        if (Alive)
+        {
+            value = Health + value > MaxHealth ? MaxHealth - Health : value;
+            Health = Health + value;
 
-        AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "+" + value + "Health"));
-    }
+            AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "+" + value + "Health"));
+        }
+    } 
 
     public void DecreasePA(int value)
     {
@@ -425,7 +447,6 @@ public class Crit : MonoBehaviour
 
         Confused = Confused - 1 < 0 ? 0 : Confused - 1;
         Asleep = Asleep - 1 < 0 ? 0 : Asleep - 1;
-
         ProcessPoison();
         ProcessDoT();
         ProcessHoT();
@@ -470,13 +491,6 @@ public class Crit : MonoBehaviour
     {
         AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "miss"));
     }
-
-    public void GainXP(int value)
-    {
-        Xp += value;
-        //TODO 
-    }
-
     //stat modification class that stores modification values 
     //and the remaining turns before they go down
     public class StatsMod
@@ -525,6 +539,197 @@ public class Crit : MonoBehaviour
             Value = val;
             Turns = turns;
         }
+    }
+
+
+
+    public void LevelUp(int lvl = 1)
+    {
+        for (int i = 0; i < lvl; ++i)
+        {
+            HealthUp();
+            PAUp();
+            PDUp();
+            MAUp();
+            MDUp();
+            SpeedUp();
+            Level++;
+        }
+        if(Level > 10)
+        {
+            ActiveFrame = frames[1];
+            ActiveSprite = images[1];
+        }
+        if(Level > 20)
+        {
+            ActiveFrame = frames[2];
+            ActiveSprite = images[2];
+        }
+        if(Level > 10)
+        {
+            ActiveFrame = frames[3];
+            ActiveSprite = images[3];
+        }
+        if(Level > 10)
+        {
+            ActiveFrame = frames[3];
+            ActiveSprite = images[3];
+        }
+    }
+
+    private void HealthUp()
+    {
+        int increment = 0;
+        switch (HealthUpRate)
+        {
+            case UpRate.Weak:
+                increment = Random.Range(1, 3);
+                break;
+            case UpRate.Average:
+                increment = Random.Range(2, 4);
+                break;
+            case UpRate.Strong:
+                increment = Random.Range(3, 4);
+                break;
+            case UpRate.Max:
+                increment = Random.Range(3, 5);
+                break;
+            case UpRate.Elite:
+                increment = Random.Range(3, 6);
+                break;
+        }
+        MaxHealth += increment;
+        Health = MaxHealth;
+    }
+    private void PAUp()
+    {
+        int increment = 0;
+       
+        switch ((int)PAUpRate)
+        {
+            case (int)UpRate.Weak:
+                increment = Random.Range(0, 2);
+                break;
+            case (int)UpRate.Average:
+                increment = Random.Range(0, 3);
+                break;
+            case (int)UpRate.Strong:
+                increment = Random.Range(1, 3);
+                break;
+            case (int)UpRate.Max:
+                increment = Random.Range(2, 3);
+                break;
+            case (int)UpRate.Elite:
+                increment = Random.Range(2, 4);
+                break;
+        }
+        PhysicalAttack += increment;
+    }
+    private void PDUp()
+    {
+        int increment = 0;
+
+        switch ((int)PDUpRate)
+        {
+            case (int)UpRate.Weak:
+                increment = Random.Range(0, 2);
+                break;
+            case (int)UpRate.Average:
+                increment = Random.Range(0, 3);
+                break;
+            case (int)UpRate.Strong:
+                increment = Random.Range(1, 3);
+                break;
+            case (int)UpRate.Max:
+                increment = Random.Range(2, 3);
+                break;
+            case (int)UpRate.Elite:
+                increment = Random.Range(2, 4);
+                break;
+        }
+        if (Random.Range(0,4) == 4)
+            increment--;
+        PhysicalDefense += increment;
+    }
+    private void MAUp()
+    {
+        int increment = 0;
+
+        switch ((int)MAUpRate)
+        {
+            case (int)UpRate.Weak:
+                increment = Random.Range(0, 2);
+                break;
+            case (int)UpRate.Average:
+                increment = Random.Range(0, 3);
+                break;
+            case (int)UpRate.Strong:
+                increment = Random.Range(1, 3);
+                break;
+            case (int)UpRate.Max:
+                increment = Random.Range(2, 3);
+                break;
+            case (int)UpRate.Elite:
+                increment = Random.Range(2, 4);
+                break;
+        }
+        MagicAttack += increment;
+    }
+    private void MDUp()
+    {
+        int increment = 0;
+
+
+        switch ((int)MDUpRate)
+        {
+            case (int)UpRate.Weak:
+                increment = Random.Range(0, 2);
+                break;
+            case (int)UpRate.Average:
+                increment = Random.Range(0, 3);
+                break;
+            case (int)UpRate.Strong:
+                increment = Random.Range(1, 3);
+                break;
+            case (int)UpRate.Max:
+                increment = Random.Range(2, 3);
+                break;
+            case (int)UpRate.Elite:
+                increment = Random.Range(2, 4);
+                break;
+        }
+        if (Random.Range(0, 4) == 4)
+            increment--;
+        MagicDefense += increment;
+    }
+    private void SpeedUp()
+    {
+        int increment = 0;
+
+        switch ((int)SpeedUpRate)
+        {
+            case (int)UpRate.Weak:
+                increment = Random.Range(0, 2);
+                break;
+            case (int)UpRate.Average:
+                increment = Random.Range(0, 3);
+                break;
+            case (int)UpRate.Strong:
+                increment = Random.Range(1, 3);
+                break;
+            case (int)UpRate.Max:
+                increment = Random.Range(2, 3);
+                break;
+            case (int)UpRate.Elite:
+                increment = Random.Range(2, 4);
+                break;
+        }
+        Speed += increment;
+    }
+    public void GainXP(int value)
+    {
+        Xp += value;
+        //TODO 
     }
 }
 

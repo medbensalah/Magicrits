@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour, ICritController
                         rightArrow.GetComponent<Image>().sprite = inactiveRightArrow;
                     }
                 }
-                lastPage = (currentPage == pages) ? fightInitializer.nbSkills % 4 : 4;
+                lastPage = (currentPage == pages) ? fightInitializer.nbSkills % 5  : 4;
                 for (int i = 0; i < lastPage; ++i)
                 {
                     fightInitializer.skillSlots[i].SetActive(true);

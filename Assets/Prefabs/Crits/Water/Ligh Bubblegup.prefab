@@ -109,19 +109,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7d0efe2c95653f84aacb69b0c7718d7d, type: 3}
   - {fileID: 21300000, guid: 2c5f53c976c39db42a45004b44f696e3, type: 3}
   - {fileID: 21300000, guid: 298ce5444969e4b4daf09066f41b7786, type: 3}
-  ActiveSprite: {fileID: 21300000, guid: 27e54f7a8901398489d0e9c42bbcede1, type: 3}
-  ActiveFrame: {fileID: 21300000, guid: 6652cdd1e96dc2240a4379951ea96a0b, type: 3}
+  ActiveSprite: {fileID: 21300000, guid: 57d9fb149c18b044f9e75dc5c465f24e, type: 3}
+  ActiveFrame: {fileID: 21300000, guid: 298ce5444969e4b4daf09066f41b7786, type: 3}
   Alive: 1
   critType: 4
   level: 1
   xp: 0
   MaxHealth: 17
   health: 17
-  physicalAttack: 7
-  magicAttack: 9
+  physicalAttack: 4
+  magicAttack: 7
   physicalDefense: 6
   magicDefense: 6
-  speed: 10
+  speed: 8
   accuracy: 100
   Confused: 0
   Asleep: 0

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -453,6 +453,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6826221220285561266, guid: ac905a6b90f980044a1607eb3757765b,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6826221220285561266, guid: ac905a6b90f980044a1607eb3757765b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6826221220285561266, guid: ac905a6b90f980044a1607eb3757765b,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.3
       objectReference: {fileID: 0}
@@ -506,6 +516,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6826221220285561268, guid: ac905a6b90f980044a1607eb3757765b,
+        type: 3}
+      propertyPath: health
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6826221220285561269, guid: ac905a6b90f980044a1607eb3757765b,
         type: 3}
       propertyPath: m_Name
@@ -1314,7 +1329,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.007831446, g: 0.0017799926, b: 0.078431375, a: 0}
+  m_BackGroundColor: {r: 0.0028301869, g: 0, b: 0.028301895, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

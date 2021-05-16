@@ -8,6 +8,7 @@ public class PlayerTeam : MonoBehaviour
     public static List<Crit> team = new List<Crit>();
     public CritStorage critStorage;
 
+
     private void Start()
     {
         Init(ChooseCrit.choice);
@@ -15,35 +16,33 @@ public class PlayerTeam : MonoBehaviour
 
     public void Init(int choice)
     {
-        switch (choice)
-        {
-            case 0:
-                team.Add(critStorage.Magicrits.Where(x => x.name.Equals("Lumera")).First());
-                break;
-            case 1:
-                team.Add(critStorage.Magicrits.Where(x => x.name.Equals("Cubsprout")).First());
-                choice = 1;
-                break;
-            case 2:
-                team.Add((Crit)critStorage.Magicrits.Where(x => x.name.Equals("Bubbles")).First());
-                choice = 2;
-                break;
-            case 3:
-                team.Add((Crit)critStorage.Magicrits.Where(x => x.name.Equals("Flutterpat")).First());
-                choice = 3;
-                break;
-            case 4:
-                team.Add((Crit)critStorage.Magicrits.Where(x => x.name.Equals("Hoopty")).First());
-                choice = 4;
-                break;
-        }
+        AddCrit(choice); 
     }
 
     public void AddCrit(string critName)
     {
         if(team.Count() < 4)
         {
-            team.Add((Crit)critStorage.Magicrits.Where(x => x.name.Equals(critName)));
+            Crit myCrit = Instantiate((Crit)critStorage.Magicrits.First(x => x.critName.Equals(critName)));
+            myCrit.GetComponent<SpriteRenderer>().enabled = false;
+            DontDestroyOnLoad(myCrit);
+
+            team.Add(Instantiate((Crit)critStorage.Magicrits.First(x => x.critName.Equals(critName))));
+        }
+        else
+        {
+            //TODO transfer to inventory
+        }
+    }
+    public void AddCrit(int crit)
+    {
+        if(team.Count() < 4)
+        {
+            Crit myCrit = Instantiate(critStorage.Magicrits[crit]);
+            myCrit.GetComponent<SpriteRenderer>().enabled = false;
+            DontDestroyOnLoad(myCrit);
+
+            team.Add(myCrit);
         }
         else
         {

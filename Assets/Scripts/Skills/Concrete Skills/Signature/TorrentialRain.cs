@@ -22,7 +22,7 @@ public class TorrentialRain : MonoBehaviour, ISkill
             MASkill m = new MASkill();
             SleepSkill m1 = new SleepSkill();
             m.init(val, acc);
-            m1.init(val, acc);
+            m1.init(1, 50);
             skills.Add(m);
             skills.Add(m1);
         }

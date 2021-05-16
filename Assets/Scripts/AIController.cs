@@ -38,7 +38,7 @@ public class AIController : MonoBehaviour, ICritController
             {
                 if (!attack)
                 {
-                    Debug.Log(skill + "at 1 start"); //**************************************************************
+                    //**************************************************************
                     int rnd = Random.Range(1, 3);
                     if (rnd == 1 && buffs.Count > 0)
                     {
@@ -58,13 +58,13 @@ public class AIController : MonoBehaviour, ICritController
                     }
                     attack = true;
 
-                    Debug.Log(skill + "at 1 end"); //**************************************************************
+                    //**************************************************************
                 }
                 else
                 {
                     if (foe.Asleep == 0 && foe.Confused == 0)
                     {
-                        Debug.Log(skill + "at 2.1 start"); //**************************************************************
+                        //**************************************************************
                         int rnd = Random.Range(1, 7);
                         if (rnd <= 3)
                         {
@@ -83,11 +83,11 @@ public class AIController : MonoBehaviour, ICritController
                             skill = poisons[poisons.Count - 1].GetType().GetField("name").GetValue(poisons[poisons.Count - 1]).ToString();
                         }
 
-                        Debug.Log(skill + "at 2.1 end");//*****************************************************************************
+                        //*****************************************************************************
                     }
                     else
                     {
-                        Debug.Log(skill + "at 2.2 start"); //**************************************************************
+                         //**************************************************************
                         int rnd = Random.Range(1, 3);
                         if (rnd == 1 && buffs.Count > 0)
                         {
@@ -106,7 +106,7 @@ public class AIController : MonoBehaviour, ICritController
                             skill = heals[heals.Count - 1].GetType().GetField("name").GetValue(heals[heals.Count - 1]).ToString();
                         }
 
-                        Debug.Log(skill + "at 2.2 end");//*********************************************************************************
+                        //*********************************************************************************
                     }
                 }
             }
@@ -114,9 +114,9 @@ public class AIController : MonoBehaviour, ICritController
             {
                 if (crit.Health * 1.0f / crit.MaxHealth > 0.5f)
                 {
-                    Debug.Log(skill + "at 3 start"); //*************************************************************************************
+                     //*************************************************************************************
                     int rnd = Random.Range(1, 20);
-                    Debug.Log(rnd);
+
                     if (rnd == 1 && buffs.Count > 0)
                     {
                         skill = buffs[buffs.Count - 1].GetType().GetField("name").GetValue(buffs[buffs.Count - 1]).ToString();
@@ -149,12 +149,12 @@ public class AIController : MonoBehaviour, ICritController
                     {
                         skill = prefs[2].GetType().GetField("name").GetValue(prefs[2]).ToString();
                     }
-                    Debug.Log(skill + "at 3 end"); //*************************************************************************************
+                    //*************************************************************************************
                 }
                 else
                 {
 
-                    Debug.Log(skill + "at 4 start"); //*************************************************************************************
+                    //*************************************************************************************
                     int rnd = Random.Range(1, 30);
                     if (rnd == 1 && buffs.Count > 0 && heals.Count >= 1)
                     {
@@ -193,13 +193,13 @@ public class AIController : MonoBehaviour, ICritController
                         skill = heals[heals.Count - 1].GetType().GetField("name").GetValue(heals[heals.Count - 1]).ToString();
                     }
 
-                    Debug.Log(skill + "at 4 end");  //********************************************************************************************************
+                    //********************************************************************************************************
                 }
             }
             else if (foe.Health * 1.0f / foe.MaxHealth <= 0.2f)
             {
 
-                Debug.Log(skill + "at 3");  //*****************************************************************************
+                //*****************************************************************************
                 skill = prefs[0].GetType().GetField("name").GetValue(prefs[0]).ToString();
             }
             skill = prefs[0].GetType().GetField("name").GetValue(prefs[0]).ToString();
@@ -210,7 +210,6 @@ public class AIController : MonoBehaviour, ICritController
     public void SetCrit(Crit crit)
     {
         this.crit = crit;
-        this.crit.Level = 35;
         ClassifySkills();
         OrderSkills();
     }
@@ -222,42 +221,42 @@ public class AIController : MonoBehaviour, ICritController
 
     public void ClassifySkills()
     {
-        int lvl = 35;
-        nbSkills = lvl <= 1 ? 2 :
-                       lvl <= 4 ? 3 :
-                       lvl <= 7 ? 4 :
-                       lvl <= 10 ? 5 :
-                       lvl <= 13 ? 6 :
-                       lvl <= 16 ? 7 :
-                       lvl <= 19 ? 8 :
-                       lvl <= 22 ? 9 :
-                       lvl <= 25 ? 10 :
-                       lvl <= 28 ? 11 :
-                       lvl <= 30 ? 12 : 13;
+        int lvl = crit.Level;
+        nbSkills = lvl <= 3 ? 2 :
+                       lvl <= 6 ? 3 :
+                       lvl <= 9 ? 4 :
+                       lvl <= 12 ? 5 :
+                       lvl <= 15 ? 6 :
+                       lvl <= 18 ? 7 :
+                       lvl <= 21 ? 8 :
+                       lvl <= 24 ? 9 :
+                       lvl <= 27 ? 10 :
+                       lvl <= 29 ? 11 :
+                       lvl <= 34 ? 12 : 13;
         heals = crit.skills.Where(skill => crit.skills.IndexOf(skill) < nbSkills &&
         fightInitializer.skillInfo[crit.skills.IndexOf(skill)].type == (int)SkillType.Heal).ToList();
-        Debug.Log("heals :" + heals.Count);
+        //Debug.Log("heals :" + heals.Count);
         buffs = crit.skills.Where(skill => crit.skills.IndexOf(skill) < nbSkills &&
         fightInitializer.skillInfo[crit.skills.IndexOf(skill)].type == (int)SkillType.Buff).ToList();
-        Debug.Log("buffs :" + buffs.Count);
+        //Debug.Log("buffs :" + buffs.Count);
         debuffs = crit.skills.Where(skill => crit.skills.IndexOf(skill) < nbSkills &&
         fightInitializer.skillInfo[crit.skills.IndexOf(skill)].type == (int)SkillType.Debuff).ToList();
-        Debug.Log("debuffs :" + debuffs.Count);
+        //Debug.Log("debuffs :" + debuffs.Count);
         poisons = crit.skills.Where(skill => crit.skills.IndexOf(skill) < nbSkills &&
         fightInitializer.skillInfo[crit.skills.IndexOf(skill)].type == (int)SkillType.Poison).ToList();
-        Debug.Log("poisons :" + poisons.Count);
+        //Debug.Log("poisons :" + poisons.Count);
         confuses = crit.skills.Where(skill => crit.skills.IndexOf(skill) < nbSkills &&
         fightInitializer.skillInfo[crit.skills.IndexOf(skill)].type == (int)SkillType.Confuse).ToList();
-        Debug.Log("consuses :" + confuses.Count);
+        //Debug.Log("consuses :" + confuses.Count);
         sleeps = crit.skills.Where(skill => crit.skills.IndexOf(skill) < nbSkills &&
         fightInitializer.skillInfo[crit.skills.IndexOf(skill)].type == (int)SkillType.Sleep).ToList();
-        Debug.Log("sleeps :" + sleeps.Count);
+        //Debug.Log("sleeps :" + sleeps.Count);
         physicals = crit.skills.Where(skill => crit.skills.IndexOf(skill) < nbSkills &&
         fightInitializer.skillInfo[crit.skills.IndexOf(skill)].type == (int)SkillType.Physical).ToList();
-        Debug.Log("phys :" + physicals.Count);
+        //Debug.Log("phys :" + physicals.Count);
         magics = crit.skills.Where(skill => crit.skills.IndexOf(skill) < nbSkills &&
         fightInitializer.skillInfo[crit.skills.IndexOf(skill)].type < 6).ToList();
-        Debug.Log("mag :" + magics.Count);
+        //Debug.Log("mag :" + magics.Count);
     }
 
     public void OrderSkills()
@@ -284,7 +283,6 @@ public class AIController : MonoBehaviour, ICritController
         }
         else
         {
-            Debug.Log(PhysicalOrientation() + "phys");
             if (magics.Count >= 1)
             {
                 prefs.Add(magics[magics.Count - 1]);

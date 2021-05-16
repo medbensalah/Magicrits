@@ -18,7 +18,7 @@ TagManager:
   - Decoration
   - Highlighter
   - Player
-  - 
+  - Nox
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Nox
+    uniqueID: 4130019329
+    locked: 0
   - name: Decoration
     uniqueID: 1504040819
     locked: 0
@@ -51,4 +54,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3745163989
+    locked: 0
+  - name: Diag
+    uniqueID: 3278306735
     locked: 0

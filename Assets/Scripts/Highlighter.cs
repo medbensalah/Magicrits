@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.U2D;
 using UnityEngine.SceneManagement;
+using Unity.Jobs;
 
 public class Highlighter : MonoBehaviour
 {
@@ -43,14 +44,17 @@ public class Highlighter : MonoBehaviour
     private void OnMouseUpAsButton()
     {
 
-        if (!searched)
+        if (!DialogueManager.inDialogue)
         {
-            if (transform.parent.gameObject.tag.Equals("Decoration"))
+            if (!searched)
             {
-                shr.color = new Color32(255, 255, 255, 0);
-                MouseCursorManager.fightCursorBool = false;
-                searched = true;
-                Search();
+                if (transform.parent.gameObject.tag.Equals("Decoration"))
+                {
+                    shr.color = new Color32(255, 255, 255, 0);
+                    MouseCursorManager.fightCursorBool = false;
+                    searched = true;
+                    Search();
+                }
             }
         }
     }
@@ -90,19 +94,21 @@ public class Highlighter : MonoBehaviour
                 {
                     BGIndex = "forest";
                 }
+                
+                else if (scene.Contains("temple"))
+                {
+                    BGIndex = "temple";
+                }
 
                 //setting the critIndex based on the fight caller scene
-                if (scene.Contains("forest"))
-                {
-                    critIndex = "forest";
-                }
-                if (scene.Contains("plain"))
-                {
-                    critIndex = "plain";
-                }
+                
                 if (scene.Contains("desert"))
                 {
                     critIndex = "desert";
+                }
+                if (scene.Contains("plain") || scene.Contains("forest"))
+                {
+                    critIndex = "plain";
                 }
                 if (scene.Contains("mount"))
                 {
