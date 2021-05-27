@@ -177,15 +177,12 @@ public class FightManager : MonoBehaviour
                 if (enemy.GetComponent<Crit>().Asleep <= 0)
                 {
                     caster = enemy.GetComponent<Crit>();
+                    target = player.GetComponent<Crit>();
                     //confuse here
-                    if(caster.Confused > 0)
+                    if (caster.Confused > 0)
                     {
                         int rnd = UnityEngine.Random.Range(1, 2);
                         target = rnd == 1 ? enemy.GetComponent<Crit>() : player.GetComponent<Crit>();
-                    }
-                    else
-                    {
-                        target = player.GetComponent<Crit>();
                     }
                     CCParams[0] = caster;
                     CCParams[1] = caster;
@@ -211,7 +208,8 @@ public class FightManager : MonoBehaviour
                         //    anim.transform.localScale.y);
                         //animLock = true;
 
-                        string type = skill.GetType().ToString().ToLower(); if (type.Contains("debuff"))
+                        string type = skill.GetType().ToString().ToLower(); 
+                        if (type.Contains("debuff"))
                         {
                             DestroyImmediate(anim);
                             anim = Instantiate(animations.First(x => x.name.StartsWith("Debuff")), animation);
@@ -239,6 +237,7 @@ public class FightManager : MonoBehaviour
                                 DestroyImmediate(anim);
                                 anim = Instantiate(animations.First(x => x.name.StartsWith(name)), animation);
                             }
+                            Debug.Log("player " + player.transform.position.x + " target " + target.transform.position.x);
                             skill.GetType().GetMethod("execute").Invoke(skill, CTParams);
                             anim.transform.position = new Vector3(target.transform.position.x, anim.transform.position.y, 0);
                         }

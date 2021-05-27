@@ -337,7 +337,7 @@ public class Crit : MonoBehaviour
     }
     public void InflictSleep(int turns)
     {
-        Asleep += (turns + 1);
+        Asleep += turns;
         AnimationManager.PushToAnimationManager(new KeyValuePair<Crit, string>(this, "Sleep"));
     }
 
